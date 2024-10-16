@@ -61,8 +61,7 @@ class CounterfactualGenerator(ResponseGenerator):
         """
         Class for parsing and replacing protected attribute words.
 
-        For the full list of gender and race words, refer to
-        https://github.aetna.com/analytics-org/llambda/blob/main/llambda/bias_word_lists.py
+        For the full list of gender and race words, refer to https://github.com/pages/cvs-health/llambda
 
         Parameters
         ----------

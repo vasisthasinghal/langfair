@@ -23,8 +23,8 @@ from llambda.metrics.counterfactual.metrics.baseclass.metrics import Metric
 class RougelSimilarity(Metric):
     def __init__(self, rouge_metric: str = "rougeL", how: str = "mean") -> None:
         """Compute variations of social group substitutions of language models. This class
-        enables calculation of counterfactual Rouge-L similarity. For more information on these metrics, refer to:
-        https://github.aetna.com/analytics-org/llambda/blob/main/documentation/LLM_Bias_Technical_Playbook_V2.pdf
+        enables calculation of counterfactual ROUGE-L. For more information on this metric, refer to:
+        https://arxiv.org/abs/2407.10853
 
         Parameters
         ----------
