@@ -4,7 +4,7 @@
 
 # Library for Assessing Bias and Fairness in LLMs
 
-LLaMBDA (Large Language Model Bias Detection and Auditing) is a Python library for conducting bias and fairness assessments of LLM use cases. This repository includes a framework for [choosing bias and fairness metrics](https://github.aetna.com/analytics-org/llambda#choosing-bias-and-fairness-metrics-for-an-llm-use-case), [demo notebooks](./examples), and a LLM bias and fairness [technical playbook](https://arxiv.org/pdf/2407.10853) containing a thorough discussion of LLM bias and fairness risks, evaluation metrics, and best practices. Please refer to our [documentation site](https://github.aetna.com/pages/analytics-org/llambda) for more details on how to use LLaMBDA.
+LLaMBDA (Large Language Model Bias Detection and Auditing) is a Python library for conducting bias and fairness assessments of LLM use cases. This repository includes a framework for [choosing bias and fairness metrics](#choosing-bias-and-fairness-metrics-for-an-llm-use-case), [demo notebooks](./examples), and a LLM bias and fairness [technical playbook](https://arxiv.org/pdf/2407.10853) containing a thorough discussion of LLM bias and fairness risks, evaluation metrics, and best practices. Please refer to our [documentation site](https://github.com/pages/cvs-health/llambda) for more details on how to use LLaMBDA.
 
 Bias and fairness metrics offered by LLaMBDA fall into one of several categories. The full suite of metrics is displayed below.
 
@@ -38,21 +38,21 @@ Bias and fairness metrics offered by LLaMBDA fall into one of several categories
 * False Discovery Rate Disparity ([Bellamy et al., 2018](https://arxiv.org/abs/1810.01943); [Saleiro et al., 2019](https://arxiv.org/abs/1811.05577))
 
 ## Quickstart 
-### Create a virtual environment for using LLaMBDA
+### (Optional) Create a virtual environment for using LLaMBDA
 We recommend creating a new virtual environment using venv before installing LLaMBDA. To do so, please follow instructions [here](https://docs.python.org/3/library/venv.html).
 
 ### Installing LLaMBDA
-Install LLaMBDA using pip directly from the GitHub repository.
+The latest version can be installed from PyPI:
 
 ```bash
-pip install --user git+https://github.aetna.com/analytics-org/llambda.git
+pip install llambda
 ```
 
-### Sample Code 
+### Usage
 Below is a sample of code illustrating how to use LLaMBDA's `AutoEval` class for text generation and summarization use cases. The below example assumes the user has already defined parameters `DEPLOYMENT_NAME`, `API_KEY`, `API_BASE`, `API_TYPE`, `API_VERSION`, and a list of prompts from their use case `prompts`.
 
 Create `langchain` LLM object.
-```bash
+```python
 from langchain_openai import AzureChatOpenAI
 llm = AzureChatOpenAI(
     deployment_name=DEPLOYMENT_NAME,
@@ -65,7 +65,7 @@ llm = AzureChatOpenAI(
 ```
 
 Run the `AutoEval` method for automated bias / fairness evaluation
-```bash
+```python
 from llambda.auto import AutoEval
 auto_object = AutoEval(
     prompts=prompts, 
@@ -82,7 +82,7 @@ results = await auto_object.evaluate()
 
 
 Print the results and export to .txt file.
-```bash
+```python
 auto_object.export_results(file_name="metric_values.txt")
 auto_object.print_results()
 ```
@@ -91,7 +91,7 @@ auto_object.print_results()
   <img src="./assets/images/autoeval_output.png" />
 </p>
 
-## Using LLaMBDA
+## Example Notebooks
 See **[Demo Notebooks](./examples)** for notebooks illustrating how to use LLaMBDA for various bias and fairness evaluation metrics.
 
 ## Choosing Bias and Fairness Metrics for an LLM Use Case
@@ -127,7 +127,7 @@ A technical description of LLaMBDA's evaluation metrics and a practitioner's gui
 }
 
 ## Code Documentation
-Please refer to our [documentation site](https://github.aetna.com/pages/analytics-org/llambda) for more details on how to use LLaMBDA.
+Please refer to our [documentation site](https://github.com/pages/cvs-health/llambda) for more details on how to use LLaMBDA.
 
 ## Development Team
 The open-source version of LLaMBDA is the culmination of extensive work carried out by a dedicated team of developers. While the internal commit history will not be made public, we believe it's essential to acknowledge the significant contributions of our development team who were instrumental in bringing this project to fruition:
@@ -140,6 +140,3 @@ The open-source version of LLaMBDA is the culmination of extensive work carried 
 
 ## Contributing
 Contributions are welcome. Please refer [here](./CONTRIBUTING.md) for instructions on how to contribute to LLaMBDA.
-
-
-
