@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics &#8212; LLaMBDA 0.15 documentation</title>
+    <title>llambda.metrics.counterfactual.counterfactual &#8212; LLaMBDA 0.15 documentation</title>
   
   
   
@@ -38,12 +38,12 @@
     <script src="../_static/documentation_options.js?v=f41d0df0"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '_autosummary/llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_autosummary/llambda.metrics.counterfactual.counterfactual';</script>
     <link rel="icon" href="../_static/llambda-logo-only.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="llambda.metrics.counterfactual.metrics" href="llambda.metrics.counterfactual.metrics.html" />
-    <link rel="prev" title="llambda.metrics.counterfactual.counterfactual" href="llambda.metrics.counterfactual.counterfactual.html" />
+    <link rel="next" title="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics" href="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.html" />
+    <link rel="prev" title="llambda.metrics.counterfactual" href="llambda.metrics.counterfactual.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -354,8 +354,8 @@ document.write(`
 </ul>
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="llambda.metrics.counterfactual.html">llambda.metrics.counterfactual</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3 current active has-children"><a class="reference internal" href="llambda.metrics.counterfactual.counterfactual.html">llambda.metrics.counterfactual.counterfactual</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l4 current active"><a class="current reference internal" href="#">llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics</a></li>
+<li class="toctree-l3 current active has-children"><a class="current reference internal" href="#">llambda.metrics.counterfactual.counterfactual</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.html">llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="llambda.metrics.counterfactual.metrics.html">llambda.metrics.counterfactual.metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -451,7 +451,7 @@ document.write(`
     <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
     
     
-    <li class="breadcrumb-item"><a href="llambda.metrics.counterfactual.counterfactual.html" class="nav-link">llambda.metrics.counterfactual.counterfactual</a></li>
+    <li class="breadcrumb-item"><a href="llambda.metrics.counterfactual.html" class="nav-link">llambda.metrics.counterfactual</a></li>
     
     <li class="breadcrumb-item active" aria-current="page">llambda.metr...</li>
   </ul>
@@ -470,57 +470,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="llambda-metrics-counterfactual-counterfactual-counterfactualmetrics">
-<h1>llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics<a class="headerlink" href="#llambda-metrics-counterfactual-counterfactual-counterfactualmetrics" title="Link to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">llambda.metrics.counterfactual.counterfactual.</span></span><span class="sig-name descname"><span class="pre">CounterfactualMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['Cosine',</span> <span class="pre">'Rougel',</span> <span class="pre">'Bleu',</span> <span class="pre">'Sentiment</span> <span class="pre">Bias']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['Cosine',</span> <span class="pre">'Rougel',</span> <span class="pre">'Bleu',</span> <span class="pre">'Sentiment</span> <span class="pre">Bias']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.__init__" title="Link to this definition">#</a></dt>
-<dd><p>This class computes few or all counterfactual metrics supported LLaMBDA.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>metrics</strong> (<em>list</em><em> of </em><em>string/objects</em><em>, </em><em>default=</em><em>[</em><em>&quot;Cosine&quot;</em><em>, </em><em>&quot;Rougel&quot;</em><em>, </em><em>&quot;Bleu&quot;</em><em>, </em><em>&quot;Sentiment Bias&quot;</em><em>]</em>) – A list containing name or class object of metrics.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<p class="rubric">Methods</p>
+  <section id="module-llambda.metrics.counterfactual.counterfactual">
+<span id="llambda-metrics-counterfactual-counterfactual"></span><h1>llambda.metrics.counterfactual.counterfactual<a class="headerlink" href="#module-llambda.metrics.counterfactual.counterfactual" title="Link to this heading">#</a></h1>
+<p class="rubric">Classes</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.__init__" title="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([metrics])</p></td>
-<td><p>This class computes few or all counterfactual metrics supported LLaMBDA.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.evaluate" title="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.evaluate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluate</span></code></a>(texts1, texts2)</p></td>
-<td><p>This method evaluate the counterfactual metrics values for the provided pair of texts.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.html#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics" title="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CounterfactualMetrics</span></code></a>([metrics, ...])</p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<dl class="py method">
-<dt class="sig sig-object py" id="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.evaluate">
-<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texts2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.evaluate" title="Link to this definition">#</a></dt>
-<dd><p>This method evaluate the counterfactual metrics values for the provided pair of texts.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>texts1</strong> (<em>list</em><em> of </em><em>strings</em>) – A list of generated outputs from a language model each containing mention of the
-same protected attribute group.</p></li>
-<li><p><strong>texts2</strong> (<em>list</em><em> of </em><em>strings</em>) – A list, analogous to <cite>texts1</cite> of counterfactually generated outputs from a language model each containing
-mention of the same protected attribute group. The mentioned protected attribute must be a different group
-within the same protected attribute as mentioned in <cite>texts1</cite>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Dictionary containing values of counterfactual metrics</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
 </section>
 
 
@@ -534,20 +494,20 @@ within the same protected attribute as mentioned in <cite>texts1</cite>.</p></li
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="llambda.metrics.counterfactual.counterfactual.html"
+       href="llambda.metrics.counterfactual.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">llambda.metrics.counterfactual.counterfactual</p>
+        <p class="prev-next-title">llambda.metrics.counterfactual</p>
       </div>
     </a>
     <a class="right-next"
-       href="llambda.metrics.counterfactual.metrics.html"
+       href="llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">llambda.metrics.counterfactual.metrics</p>
+        <p class="prev-next-title">llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -562,25 +522,9 @@ within the same protected attribute as mentioned in <cite>texts1</cite>.</p></li
 
 
   <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics"><code class="docutils literal notranslate"><span class="pre">CounterfactualMetrics</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.__init__"><code class="docutils literal notranslate"><span class="pre">CounterfactualMetrics.__init__()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.evaluate"><code class="docutils literal notranslate"><span class="pre">CounterfactualMetrics.evaluate()</span></code></a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../_sources/_autosummary/llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.rst.txt">
+    <a href="../_sources/_autosummary/llambda.metrics.counterfactual.counterfactual.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

@@ -474,11 +474,11 @@ document.write(`
 <h1>llambda.auto.auto.AutoEval<a class="headerlink" href="#llambda-auto-auto-autoeval" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="llambda.auto.auto.AutoEval">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">llambda.auto.auto.</span></span><span class="sig-name descname"><span class="pre">AutoEval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">responses</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">langchain_llm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toxicity_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#llambda.auto.auto.AutoEval" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">llambda.auto.auto.</span></span><span class="sig-name descname"><span class="pre">AutoEval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">responses</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">langchain_llm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_calls_per_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toxicity_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neutralize_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#llambda.auto.auto.AutoEval" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="llambda.auto.auto.AutoEval.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">responses</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">langchain_llm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toxicity_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#llambda.auto.auto.AutoEval.__init__" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">responses</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">langchain_llm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_calls_per_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toxicity_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neutralize_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#llambda.auto.auto.AutoEval.__init__" title="Link to this definition">#</a></dt>
 <dd><p>This class calculates all toxicity, stereotype, and counterfactual metrics support by LLaMBDA</p>
 <section id="parameters">
 <h2>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h2>
@@ -487,21 +487,19 @@ document.write(`
 </dd>
 <dt>responses<span class="classifier">list of strings or DataFrame of strings, default is None</span></dt><dd><p>A list of generated output from an LLM. If not available, responses are generated using the model.</p>
 </dd>
-<dt>model_name<span class="classifier">str, default=None</span></dt><dd><p>Specifies which model deployment to use with langchain. If using a GPT model, specifies <cite>deployment_name</cite>
-parameter for AzureChatOpenAI (langchain) or <cite>model</cite> for openai.chat.completions.create(). If using a
-Gemini or PaLM/bison model, specifies model name. Must be provided if <cite>langchain_llm</cite> is <cite>None</cite>. Currently,
-only GPT, Gemini and PaLM/bison models are supported.</p>
+<dt>langchain_llm<span class="classifier">langchain llm object, default=None</span></dt><dd><p>A langchain llm object to get passed to chain constructor. User is responsible for specifying
+temperature and other relevant parameters to the constructor of their <cite>langchain_llm</cite> object.</p>
 </dd>
-<dt>langchain_llm<span class="classifier">langchain llm object, default=None</span></dt><dd><p>A langchain llm object to get passed to LLMChain <cite>llm</cite> argument. Must be provided if <cite>model_name</cite> is <cite>None</cite>.
-User is responsible for specifying temperature and other relevant parameters to the constructor of their
-<cite>langchain_llm</cite> object.</p>
+<dt>max_calls_per_min<span class="classifier">int, default=None</span></dt><dd><p>Specifies how many api calls to make per minute to avoid a rate limit error. By default, no
+limit is specified.</p>
 </dd>
 <dt>metrics<span class="classifier">dict or list of str, default option compute all supported metrics.</span></dt><dd><p>Specifies which metrics to evaluate.</p>
 </dd>
 <dt>toxicity_device: str or torch.device input or torch.device object, default=”cpu”</dt><dd><p>Specifies the device that toxicity classifiers use for prediction. Set to “cuda” for classifiers to be able
 to leverage the GPU. Currently, ‘detoxify_unbiased’ and ‘detoxify_original’ will use this parameter.</p>
 </dd>
-<dt><a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs<span class="classifier">Keyword arguments.</span></dt><dd><p>These will be passed to the constructor of <cite>ResponseGenerator</cite> and/or <cite>CounterfactualGenerator</cite>.</p>
+<dt>neutralize_tokens: boolean, default=True</dt><dd><p>An indicator attribute to use masking for the computation of Blue and RougeL metrics. If True, counterfactual
+responses are masked using <cite>CounterfactualGenerator.neutralize_tokens</cite> method before computing the aforementioned metrics.</p>
 </dd>
 </dl>
 </section>
@@ -510,7 +508,7 @@ to leverage the GPU. Currently, ‘detoxify_unbiased’ and ‘detoxify_original
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#llambda.auto.auto.AutoEval.__init__" title="llambda.auto.auto.AutoEval.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(prompts[, responses, model_name, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#llambda.auto.auto.AutoEval.__init__" title="llambda.auto.auto.AutoEval.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(prompts[, responses, ...])</p></td>
 <td><p>This class calculates all toxicity, stereotype, and counterfactual metrics support by LLaMBDA</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#llambda.auto.auto.AutoEval.evaluate" title="llambda.auto.auto.AutoEval.evaluate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluate</span></code></a>([metrics])</p></td>
@@ -534,8 +532,8 @@ to leverage the GPU. Currently, ‘detoxify_unbiased’ and ‘detoxify_original
 <dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</span></p>
 </dd>
 </dl>
-<section id="id3">
-<h2>Parameters:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h2>Parameters:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <dl class="simple">
 <dt>metrics<span class="classifier">dict or list of str, default option compute all supported metrics.</span></dt><dd><p>Specifies which metrics to evaluate.</p>
 </dd>
@@ -557,8 +555,8 @@ Dictionary containing values of toxicity, stereotype, and counterfactual metrics
 <dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
 </dd>
 </dl>
-<section id="id4">
-<h2>Parameters:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h2>Parameters:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <dl class="simple">
 <dt>file_name<span class="classifier">str, Default = “results.txt”</span></dt><dd><p>Name of the .txt file.</p>
 </dd>
