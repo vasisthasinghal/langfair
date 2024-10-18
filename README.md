@@ -42,7 +42,7 @@ Bias and fairness metrics offered by LLaMBDA fall into one of several categories
 We recommend creating a new virtual environment using venv before installing LLaMBDA. To do so, please follow instructions [here](https://docs.python.org/3/library/venv.html).
 
 ### Installing LLaMBDA
-We are currently awaiting PyPI approval for the name `llambda`. The latest version can be installed from the github URL:
+The latest version can be installed from the github URL:
 
 ```bash
 pip install git+https://github.com/cvs-health/llambda.git
