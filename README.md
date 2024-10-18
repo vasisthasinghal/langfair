@@ -42,10 +42,10 @@ Bias and fairness metrics offered by LLaMBDA fall into one of several categories
 We recommend creating a new virtual environment using venv before installing LLaMBDA. To do so, please follow instructions [here](https://docs.python.org/3/library/venv.html).
 
 ### Installing LLaMBDA
-The latest version can be installed from PyPI:
+We are currently awaiting PyPI approval for the name `llambda`. The latest version can be installed from the github URL:
 
 ```bash
-pip install llambda
+pip install git+https://github.com/cvs-health/llambda.git
 ```
 
 ### Usage
@@ -60,7 +60,7 @@ llm = AzureChatOpenAI(
     azure_endpoint=API_BASE,
     openai_api_type=API_TYPE,
     openai_api_version=API_VERSION,
-    temperature=1 # User to set temperature
+    temperature=0.4 # User to set temperature
 )
 ```
 
