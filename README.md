@@ -4,7 +4,7 @@
 
 # Library for Assessing Bias and Fairness in LLMs
 
-LLaMBDA (Large Language Model Bias Detection and Auditing) is a Python library for conducting bias and fairness assessments of LLM use cases. This repository includes a framework for [choosing bias and fairness metrics](#choosing-bias-and-fairness-metrics-for-an-llm-use-case), [demo notebooks](./examples), and a LLM bias and fairness [technical playbook](https://arxiv.org/pdf/2407.10853) containing a thorough discussion of LLM bias and fairness risks, evaluation metrics, and best practices. Please refer to our [documentation site](https://github.com/pages/cvs-health/llambda) for more details on how to use LLaMBDA.
+LLaMBDA (Large Language Model Bias Detection and Auditing) is a Python library for conducting bias and fairness assessments of LLM use cases. This repository includes a framework for [choosing bias and fairness metrics](#choosing-bias-and-fairness-metrics-for-an-llm-use-case), [demo notebooks](./examples), and a LLM bias and fairness [technical playbook](https://arxiv.org/pdf/2407.10853) containing a thorough discussion of LLM bias and fairness risks, evaluation metrics, and best practices. Please refer to our [documentation site](https://cvs-health.github.io/llambda/) for more details on how to use LLaMBDA.
 
 Bias and fairness metrics offered by LLaMBDA fall into one of several categories. The full suite of metrics is displayed below.
 
@@ -127,7 +127,7 @@ A technical description of LLaMBDA's evaluation metrics and a practitioner's gui
 }
 
 ## Code Documentation
-Please refer to our [documentation site](https://github.com/pages/cvs-health/llambda) for more details on how to use LLaMBDA.
+Please refer to our [documentation site](https://cvs-health.github.io/llambda/) for more details on how to use LLaMBDA.
 
 ## Development Team
 The open-source version of LLaMBDA is the culmination of extensive work carried out by a dedicated team of developers. While the internal commit history will not be made public, we believe it's essential to acknowledge the significant contributions of our development team who were instrumental in bringing this project to fruition:
