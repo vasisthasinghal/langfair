@@ -2,8 +2,8 @@ import json
 
 import numpy as np
 
-from llambda.metrics.stereotype import StereotypeMetrics
-from llambda.metrics.stereotype.metrics import (
+from langfair.metrics.stereotype import StereotypeMetrics
+from langfair.metrics.stereotype.metrics import (
     CooccurrenceBiasMetric,
     StereotypeClassifier,
     StereotypicalAssociations,

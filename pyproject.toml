@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "llambda"
+name = "langfair"
 version = "1.0.0"
 description = "Bias and Fairness Assessments for Language Models"
 readme = "README.md"
 authors = ["Dylan Bouchard <dylan.bouchard@cvshealth.com>"]
-repository = "https://github.com/cvs-health/llambda"
+repository = "https://github.com/cvs-health/langfair"
 classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Operating System :: OS Independent",
@@ -12,9 +12,9 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 packages = [
-    { include = "llambda" },
-    { include = "llambda/metrics" },
-    { include = "llambda/generator" },
+    { include = "langfair" },
+    { include = "langfair/metrics" },
+    { include = "langfair/generator" },
 ]
 exclude = ["docs", "docs_src"] # never include documentation in build
 
