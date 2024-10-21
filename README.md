@@ -42,7 +42,7 @@ Bias and fairness metrics offered by LangFair fall into one of several categorie
 We recommend creating a new virtual environment using venv before installing LangFair. To do so, please follow instructions [here](https://docs.python.org/3/library/venv.html).
 
 ### Installing LangFair
-The latest version can be installed from the github URL:
+The latest version can be installed from PyPI:
 
 ```bash
 pip install langfair
