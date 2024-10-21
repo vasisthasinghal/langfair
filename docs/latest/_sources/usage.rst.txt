@@ -12,4 +12,4 @@ We recommend creating a new virtual environment using venv before installing Lan
 
 .. code-block:: console
 
-   pip install git+https://github.com/cvs-health/langfair.git
+   pip install langfair
