@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to LLaMBDA's documentation!
+Welcome to LangFair's documentation!
 ===================================
 
 .. toctree::
@@ -16,4 +16,4 @@ Welcome to LLaMBDA's documentation!
 
 Check out the :doc:`usage` section for further information, including how to :ref:`install <installation>` the project.
 
-View `LLaMBDA white paper <https://arxiv.org/pdf/2407.10853>`_. 
+View `LangFair white paper <https://arxiv.org/pdf/2407.10853>`_. 

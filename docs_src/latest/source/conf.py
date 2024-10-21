@@ -7,12 +7,12 @@ import importlib.metadata
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("../../../llambda"))  # lets sphinx find llambda code
+sys.path.insert(0, os.path.abspath("../../../langfair"))  # lets sphinx find llambda code
 
-project = "LLaMBDA"
+project = "LangFair"
 copyright = "2024, CVS Health"
 author = "Dylan Bouchard"
-version = importlib.metadata.version("llambda")
+version = importlib.metadata.version("langfair")
 release = ".".join(version.rsplit(".")[:-1])
 
 extensions = [
@@ -40,13 +40,13 @@ exclude_patterns = []
 html_theme = "pydata_sphinx_theme"
 
 html_theme_options = {
-    "github_url": "https://github.com/cvs-health/llambda",
+    "github_url": "https://github.com/cvs-health/langfair",
     "navbar_align": "left",
     "navbar_end": ["theme-switcher", "navbar-icon-links"],
     "logo": {
-        "image_light": "_static/images/llambda-logo.png",
-        "image_dark": "_static/images/llambda-logo2.png",
+        "image_light": "_static/images/langfair-logo.png",
+        "image_dark": "_static/images/langfair-logo2.png",
     },
 }
 
-html_favicon = "_static/images/llambda-logo-only.png"
+html_favicon = "_static/images/langfair-logo-only.png"

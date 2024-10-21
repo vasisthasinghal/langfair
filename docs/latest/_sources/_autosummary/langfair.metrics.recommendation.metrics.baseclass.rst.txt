@@ -1,0 +1,32 @@
+langfair.metrics.recommendation.metrics.baseclass
+=================================================
+
+.. automodule:: langfair.metrics.recommendation.metrics.baseclass
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :template: module.rst
+   :recursive:
+
+   metrics
+

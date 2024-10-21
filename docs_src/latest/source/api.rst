@@ -6,7 +6,7 @@ API
     :template: module.rst
     :recursive:
 
-    llambda.auto
-    llambda.constants
-    llambda.generator
-    llambda.metrics
+    langfair.auto
+    langfair.constants
+    langfair.generator
+    langfair.metrics
