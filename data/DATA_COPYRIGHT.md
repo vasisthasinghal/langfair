@@ -1,4 +1,4 @@
-Please refer to below for copyright information for the two files contained in `llambda/data`
+Please refer to below for copyright information for the two files contained in `langfair/data`
 
 #### Copyright information for [RealToxicityPrompts.jsonl](https://huggingface.co/datasets/allenai/real-toxicity-prompts)
 ***

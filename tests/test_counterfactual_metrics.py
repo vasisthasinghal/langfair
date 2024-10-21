@@ -2,8 +2,8 @@ import json
 
 import numpy as np
 
-from llambda.metrics.counterfactual import CounterfactualMetrics
-from llambda.metrics.counterfactual.metrics import (
+from langfair.metrics.counterfactual import CounterfactualMetrics
+from langfair.metrics.counterfactual.metrics import (
     BleuSimilarity,
     CosineSimilarity,
     RougelSimilarity,
