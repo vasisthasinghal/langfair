@@ -45,7 +45,7 @@ We recommend creating a new virtual environment using venv before installing Lan
 The latest version can be installed from the github URL:
 
 ```bash
-pip install git+https://github.com/cvs-health/langfair.git
+pip install langfair
 ```
 
 ### Usage
