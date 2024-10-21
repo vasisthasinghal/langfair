@@ -1,7 +1,7 @@
 import json
 
-from llambda.metrics.recommendation import RecommendationMetrics
-from llambda.metrics.recommendation.metrics import PRAG, SERP, JaccardSimilarity
+from langfair.metrics.recommendation import RecommendationMetrics
+from langfair.metrics.recommendation.metrics import PRAG, SERP, JaccardSimilarity
 
 datafile_path = "tests/data/recommendation/recommendation_dict_file.csv"
 with open(datafile_path, "r") as f:

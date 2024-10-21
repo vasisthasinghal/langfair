@@ -1,7 +1,7 @@
 import pytest
 from langchain_openai import AzureChatOpenAI
 
-from llambda.generator import ResponseGenerator
+from langfair.generator import ResponseGenerator
 
 
 @pytest.mark.asyncio

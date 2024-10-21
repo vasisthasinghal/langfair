@@ -4,7 +4,7 @@ from math import isclose
 
 import torch
 
-from llambda.metrics.toxicity import AvailableClassifiers, ToxicityMetrics
+from langfair.metrics.toxicity import AvailableClassifiers, ToxicityMetrics
 
 
 class TestToxicityMetrics(unittest.TestCase):

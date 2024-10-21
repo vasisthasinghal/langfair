@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="./assets/images/llambda-logo.png" />
+  <img src="./assets/images/langfair-logo.png" />
 </p>
 
 # Library for Assessing Bias and Fairness in LLMs
 
-LLaMBDA (Large Language Model Bias Detection and Auditing) is a Python library for conducting bias and fairness assessments of LLM use cases. This repository includes a framework for [choosing bias and fairness metrics](#choosing-bias-and-fairness-metrics-for-an-llm-use-case), [demo notebooks](./examples), and a LLM bias and fairness [technical playbook](https://arxiv.org/pdf/2407.10853) containing a thorough discussion of LLM bias and fairness risks, evaluation metrics, and best practices. Please refer to our [documentation site](https://cvs-health.github.io/llambda/) for more details on how to use LLaMBDA.
+LangFair is a Python library for conducting bias and fairness assessments of LLM use cases. This repository includes a framework for [choosing bias and fairness metrics](#choosing-bias-and-fairness-metrics-for-an-llm-use-case), [demo notebooks](./examples), and a LLM bias and fairness [technical playbook](https://arxiv.org/pdf/2407.10853) containing a thorough discussion of LLM bias and fairness risks, evaluation metrics, and best practices. Please refer to our [documentation site](https://cvs-health.github.io/langfair/) for more details on how to use LangFair.
 
-Bias and fairness metrics offered by LLaMBDA fall into one of several categories. The full suite of metrics is displayed below.
+Bias and fairness metrics offered by LangFair fall into one of several categories. The full suite of metrics is displayed below.
 
 ##### Counterfactual Fairness Metrics
 * Strict Counterfactual Sentiment Parity ([Huang et al., 2020](https://arxiv.org/pdf/1911.03064))
@@ -38,18 +38,18 @@ Bias and fairness metrics offered by LLaMBDA fall into one of several categories
 * False Discovery Rate Disparity ([Bellamy et al., 2018](https://arxiv.org/abs/1810.01943); [Saleiro et al., 2019](https://arxiv.org/abs/1811.05577))
 
 ## Quickstart 
-### (Optional) Create a virtual environment for using LLaMBDA
-We recommend creating a new virtual environment using venv before installing LLaMBDA. To do so, please follow instructions [here](https://docs.python.org/3/library/venv.html).
+### (Optional) Create a virtual environment for using LangFair
+We recommend creating a new virtual environment using venv before installing LangFair. To do so, please follow instructions [here](https://docs.python.org/3/library/venv.html).
 
-### Installing LLaMBDA
-The latest version can be installed from PyPI:
+### Installing LangFair
+The latest version can be installed from the github URL:
 
 ```bash
-pip install llambda
+pip install git+https://github.com/cvs-health/langfair.git
 ```
 
 ### Usage
-Below is a sample of code illustrating how to use LLaMBDA's `AutoEval` class for text generation and summarization use cases. The below example assumes the user has already defined parameters `DEPLOYMENT_NAME`, `API_KEY`, `API_BASE`, `API_TYPE`, `API_VERSION`, and a list of prompts from their use case `prompts`.
+Below is a sample of code illustrating how to use LangFair's `AutoEval` class for text generation and summarization use cases. The below example assumes the user has already defined parameters `DEPLOYMENT_NAME`, `API_KEY`, `API_BASE`, `API_TYPE`, `API_VERSION`, and a list of prompts from their use case `prompts`.
 
 Create `langchain` LLM object.
 ```python
@@ -60,13 +60,13 @@ llm = AzureChatOpenAI(
     azure_endpoint=API_BASE,
     openai_api_type=API_TYPE,
     openai_api_version=API_VERSION,
-    temperature=1 # User to set temperature
+    temperature=0.4 # User to set temperature
 )
 ```
 
 Run the `AutoEval` method for automated bias / fairness evaluation
 ```python
-from llambda.auto import AutoEval
+from langfair.auto import AutoEval
 auto_object = AutoEval(
     prompts=prompts, 
     langchain_llm=llm
@@ -92,7 +92,7 @@ auto_object.print_results()
 </p>
 
 ## Example Notebooks
-See **[Demo Notebooks](./examples)** for notebooks illustrating how to use LLaMBDA for various bias and fairness evaluation metrics.
+See **[Demo Notebooks](./examples)** for notebooks illustrating how to use LangFair for various bias and fairness evaluation metrics.
 
 ## Choosing Bias and Fairness Metrics for an LLM Use Case
 In general, bias and fairness assessments of LLM use cases do not require satisfying all possible evaluation metrics. Instead, practitioners should prioritize and concentrate on a relevant subset of metrics. To demystify metric choice for bias and fairness assessments of LLM use cases, we introduce a decision framework for selecting the appropriate evaluation metrics, as depicted in the diagram below. Leveraging the use case taxonomy outlined in the [technical playbook](https://arxiv.org/abs/2407.10853), we determine suitable choices of bias and fairness metrics for a given use case based on its relevant characteristics.
@@ -114,7 +114,7 @@ Lastly, we classify the remaining subset of focused use cases as having minimal 
 
 
 ## Associated Research
-A technical description of LLaMBDA's evaluation metrics and a practitioner's guide for selecting evaluation metrics is contained in **[this paper](https://arxiv.org/pdf/2407.10853)**. Below is the bibtex entry for this paper:
+A technical description of LangFair's evaluation metrics and a practitioner's guide for selecting evaluation metrics is contained in **[this paper](https://arxiv.org/pdf/2407.10853)**. Below is the bibtex entry for this paper:
 
 @misc{bouchard2024actionableframeworkassessingbias,
       title={An Actionable Framework for Assessing Bias and Fairness in Large Language Model Use Cases}, 
@@ -127,10 +127,10 @@ A technical description of LLaMBDA's evaluation metrics and a practitioner's gui
 }
 
 ## Code Documentation
-Please refer to our [documentation site](https://cvs-health.github.io/llambda/) for more details on how to use LLaMBDA.
+Please refer to our [documentation site](https://cvs-health.github.io/langfair/) for more details on how to use LangFair.
 
 ## Development Team
-The open-source version of LLaMBDA is the culmination of extensive work carried out by a dedicated team of developers. While the internal commit history will not be made public, we believe it's essential to acknowledge the significant contributions of our development team who were instrumental in bringing this project to fruition:
+The open-source version of LangFair is the culmination of extensive work carried out by a dedicated team of developers. While the internal commit history will not be made public, we believe it's essential to acknowledge the significant contributions of our development team who were instrumental in bringing this project to fruition:
 
 - [Dylan Bouchard](https://github.com/dylanbouchard)
 - [Mohit Singh Chauhan](https://github.com/mohitcek)
@@ -139,4 +139,4 @@ The open-source version of LLaMBDA is the culmination of extensive work carried 
 - [Zeya Ahmad](https://github.com/zeya30)
 
 ## Contributing
-Contributions are welcome. Please refer [here](./CONTRIBUTING.md) for instructions on how to contribute to LLaMBDA.
+Contributions are welcome. Please refer [here](./CONTRIBUTING.md) for instructions on how to contribute to LangFair.
