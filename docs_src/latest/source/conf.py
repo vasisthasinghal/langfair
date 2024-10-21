@@ -10,7 +10,7 @@ import sys
 sys.path.insert(0, os.path.abspath("../../../llambda"))  # lets sphinx find llambda code
 
 project = "LLaMBDA"
-copyright = "2024, Dylan Bouchard"
+copyright = "2024, CVS Health"
 author = "Dylan Bouchard"
 version = importlib.metadata.version("llambda")
 release = ".".join(version.rsplit(".")[:-1])
