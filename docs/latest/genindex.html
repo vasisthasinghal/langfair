@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; LangFair 1.0 documentation</title>
+    <title>Index &#8212; LangFair 0.1 documentation</title>
   
   
   
@@ -15,26 +15,29 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/documentation_options.js?v=2709fde1"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
@@ -43,6 +46,7 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.0" />
   </head>
   
   
@@ -58,19 +62,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -78,7 +71,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -86,8 +78,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,8 +112,8 @@
       
     
     
-    <img src="_static/langfair-logo.png" class="logo__image only-light" alt="LangFair 1.0 documentation - Home"/>
-    <script>document.write(`<img src="_static/langfair-logo2.png" class="logo__image only-dark" alt="LangFair 1.0 documentation - Home"/>`);</script>
+    <img src="_static/langfair-logo.png" class="logo__image only-light" alt="LangFair 0.1 documentation - Home"/>
+    <img src="_static/langfair-logo2.png" class="logo__image only-dark pst-js-only" alt="LangFair 0.1 documentation - Home"/>
   
   
 </a></div>
@@ -160,29 +152,21 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -207,15 +191,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -232,7 +212,8 @@ document.write(`
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -272,15 +253,11 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -404,60 +381,6 @@ document.write(`
 </li>
         <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.toxicity.toxicity.ToxicityMetrics.html#langfair.metrics.toxicity.toxicity.ToxicityMetrics.__init__">(langfair.metrics.toxicity.toxicity.ToxicityMetrics method)</a>, <a href="_autosummary/langfair.metrics.toxicity.toxicity.ToxicityMetrics.html#langfair.metrics.toxicity.toxicity.ToxicityMetrics.__init__">[1]</a>
 </li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.auto.auto.AutoEval.html#llambda.auto.auto.AutoEval.__init__">(llambda.auto.auto.AutoEval method)</a>, <a href="_autosummary/llambda.auto.auto.AutoEval.html#llambda.auto.auto.AutoEval.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.__init__">(llambda.generator.counterfactual.CounterfactualGenerator method)</a>, <a href="_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.generator.ResponseGenerator.html#llambda.generator.generator.ResponseGenerator.__init__">(llambda.generator.generator.ResponseGenerator method)</a>, <a href="_autosummary/llambda.generator.generator.ResponseGenerator.html#llambda.generator.generator.ResponseGenerator.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.classification.ClassificationMetrics.html#llambda.metrics.classification.classification.ClassificationMetrics.__init__">(llambda.metrics.classification.classification.ClassificationMetrics method)</a>, <a href="_autosummary/llambda.metrics.classification.classification.ClassificationMetrics.html#llambda.metrics.classification.classification.ClassificationMetrics.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.baseclass.metrics.Metric.html#llambda.metrics.classification.metrics.baseclass.metrics.Metric.__init__">(llambda.metrics.classification.metrics.baseclass.metrics.Metric method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.baseclass.metrics.Metric.html#llambda.metrics.classification.metrics.baseclass.metrics.Metric.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.html#llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.__init__">(llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.html#llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity.html#llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity.__init__">(llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity.html#llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity.html#llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity.__init__">(llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity.html#llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity.html#llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity.__init__">(llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity.html#llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.html#llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.__init__">(llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.html#llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.html#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.__init__">(llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.html#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric.html#llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric.__init__">(llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric.html#llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity.html#llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity.__init__">(llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity.html#llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity.html#llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity.__init__">(llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity.html#llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity.html#llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity.__init__">(llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity.html#llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias.html#llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias.__init__">(llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias.html#llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.baseclass.metrics.Metric.html#llambda.metrics.recommendation.metrics.baseclass.metrics.Metric.__init__">(llambda.metrics.recommendation.metrics.baseclass.metrics.Metric method)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.baseclass.metrics.Metric.html#llambda.metrics.recommendation.metrics.baseclass.metrics.Metric.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity.html#llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity.__init__">(llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity method)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity.html#llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.prag.PRAG.html#llambda.metrics.recommendation.metrics.prag.PRAG.__init__">(llambda.metrics.recommendation.metrics.prag.PRAG method)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.prag.PRAG.html#llambda.metrics.recommendation.metrics.prag.PRAG.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.serp.SERP.html#llambda.metrics.recommendation.metrics.serp.SERP.__init__">(llambda.metrics.recommendation.metrics.serp.SERP method)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.serp.SERP.html#llambda.metrics.recommendation.metrics.serp.SERP.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.recommendation.RecommendationMetrics.html#llambda.metrics.recommendation.recommendation.RecommendationMetrics.__init__">(llambda.metrics.recommendation.recommendation.RecommendationMetrics method)</a>, <a href="_autosummary/llambda.metrics.recommendation.recommendation.RecommendationMetrics.html#llambda.metrics.recommendation.recommendation.RecommendationMetrics.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations.html#llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations.__init__">(llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations method)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations.html#llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.baseclass.metrics.Metric.html#llambda.metrics.stereotype.metrics.baseclass.metrics.Metric.__init__">(llambda.metrics.stereotype.metrics.baseclass.metrics.Metric method)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.baseclass.metrics.Metric.html#llambda.metrics.stereotype.metrics.baseclass.metrics.Metric.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.__init__">(llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier method)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.html#llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.__init__">(llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric method)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.html#llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.stereotype.StereotypeMetrics.html#llambda.metrics.stereotype.stereotype.StereotypeMetrics.__init__">(llambda.metrics.stereotype.stereotype.StereotypeMetrics method)</a>, <a href="_autosummary/llambda.metrics.stereotype.stereotype.StereotypeMetrics.html#llambda.metrics.stereotype.stereotype.StereotypeMetrics.__init__">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.toxicity.toxicity.ToxicityMetrics.html#llambda.metrics.toxicity.toxicity.ToxicityMetrics.__init__">(llambda.metrics.toxicity.toxicity.ToxicityMetrics method)</a>, <a href="_autosummary/llambda.metrics.toxicity.toxicity.ToxicityMetrics.html#llambda.metrics.toxicity.toxicity.ToxicityMetrics.__init__">[1]</a>
-</li>
       </ul></li>
   </ul></td>
 </tr></table>
@@ -466,11 +389,7 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.auto.auto.AutoEval.html#langfair.auto.auto.AutoEval">AutoEval (class in langfair.auto.auto)</a>, <a href="_autosummary/langfair.auto.auto.AutoEval.html#langfair.auto.auto.AutoEval">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.auto.auto.AutoEval.html#llambda.auto.auto.AutoEval">(class in llambda.auto.auto)</a>, <a href="_autosummary/llambda.auto.auto.AutoEval.html#llambda.auto.auto.AutoEval">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -478,11 +397,7 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.counterfactual.metrics.bleu.BleuSimilarity.html#langfair.metrics.counterfactual.metrics.bleu.BleuSimilarity">BleuSimilarity (class in langfair.metrics.counterfactual.metrics.bleu)</a>, <a href="_autosummary/langfair.metrics.counterfactual.metrics.bleu.BleuSimilarity.html#langfair.metrics.counterfactual.metrics.bleu.BleuSimilarity">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity.html#llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity">(class in llambda.metrics.counterfactual.metrics.bleu)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity.html#llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -490,49 +405,21 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.classification.classification.ClassificationMetrics.html#langfair.metrics.classification.classification.ClassificationMetrics">ClassificationMetrics (class in langfair.metrics.classification.classification)</a>, <a href="_autosummary/langfair.metrics.classification.classification.ClassificationMetrics.html#langfair.metrics.classification.classification.ClassificationMetrics">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.classification.ClassificationMetrics.html#llambda.metrics.classification.classification.ClassificationMetrics">(class in llambda.metrics.classification.classification)</a>, <a href="_autosummary/llambda.metrics.classification.classification.ClassificationMetrics.html#llambda.metrics.classification.classification.ClassificationMetrics">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.html#langfair.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric">CooccurrenceBiasMetric (class in langfair.metrics.stereotype.metrics.cooccurrence)</a>, <a href="_autosummary/langfair.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.html#langfair.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.html#llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric">(class in llambda.metrics.stereotype.metrics.cooccurrence)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.html#llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.counterfactual.metrics.cosine.CosineSimilarity.html#langfair.metrics.counterfactual.metrics.cosine.CosineSimilarity">CosineSimilarity (class in langfair.metrics.counterfactual.metrics.cosine)</a>, <a href="_autosummary/langfair.metrics.counterfactual.metrics.cosine.CosineSimilarity.html#langfair.metrics.counterfactual.metrics.cosine.CosineSimilarity">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity.html#llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity">(class in llambda.metrics.counterfactual.metrics.cosine)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity.html#llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity">[1]</a>
 </li>
-      </ul></li>
-      <li><a href=".ipynb_checkpoints/_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator.cost_mapping">cost_mapping (langfair.generator.generator.ResponseGenerator attribute)</a>, <a href="_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator.cost_mapping">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.generator.ResponseGenerator.html#llambda.generator.generator.ResponseGenerator.cost_mapping">(llambda.generator.generator.ResponseGenerator attribute)</a>, <a href="_autosummary/llambda.generator.generator.ResponseGenerator.html#llambda.generator.generator.ResponseGenerator.cost_mapping">[1]</a>
-</li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href=".ipynb_checkpoints/_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator.cost_mapping">cost_mapping (langfair.generator.generator.ResponseGenerator attribute)</a>, <a href="_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator.cost_mapping">[1]</a>
+</li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.generator.counterfactual.CounterfactualGenerator.html#langfair.generator.counterfactual.CounterfactualGenerator">CounterfactualGenerator (class in langfair.generator.counterfactual)</a>, <a href="_autosummary/langfair.generator.counterfactual.CounterfactualGenerator.html#langfair.generator.counterfactual.CounterfactualGenerator">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator">(class in llambda.generator.counterfactual)</a>, <a href="_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.counterfactual.counterfactual.CounterfactualMetrics.html#langfair.metrics.counterfactual.counterfactual.CounterfactualMetrics">CounterfactualMetrics (class in langfair.metrics.counterfactual.counterfactual)</a>, <a href="_autosummary/langfair.metrics.counterfactual.counterfactual.CounterfactualMetrics.html#langfair.metrics.counterfactual.counterfactual.CounterfactualMetrics">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.html#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics">(class in llambda.metrics.counterfactual.counterfactual)</a>, <a href="_autosummary/llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.html#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.generator.counterfactual.CounterfactualGenerator.html#langfair.generator.counterfactual.CounterfactualGenerator.create_prompts">create_prompts() (langfair.generator.counterfactual.CounterfactualGenerator method)</a>, <a href="_autosummary/langfair.generator.counterfactual.CounterfactualGenerator.html#langfair.generator.counterfactual.CounterfactualGenerator.create_prompts">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.create_prompts">(llambda.generator.counterfactual.CounterfactualGenerator method)</a>, <a href="_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.create_prompts">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -543,10 +430,6 @@ document.write(`
 
       <ul>
         <li><a href=".ipynb_checkpoints/_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator.estimate_token_cost">(langfair.generator.generator.ResponseGenerator method)</a>, <a href="_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator.estimate_token_cost">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.estimate_token_cost">(llambda.generator.counterfactual.CounterfactualGenerator method)</a>, <a href="_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.estimate_token_cost">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.generator.ResponseGenerator.html#llambda.generator.generator.ResponseGenerator.estimate_token_cost">(llambda.generator.generator.ResponseGenerator method)</a>, <a href="_autosummary/llambda.generator.generator.ResponseGenerator.html#llambda.generator.generator.ResponseGenerator.estimate_token_cost">[1]</a>
 </li>
       </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.auto.auto.AutoEval.html#langfair.auto.auto.AutoEval.evaluate">evaluate() (langfair.auto.auto.AutoEval method)</a>, <a href="_autosummary/langfair.auto.auto.AutoEval.html#langfair.auto.auto.AutoEval.evaluate">[1]</a>
@@ -598,75 +481,15 @@ document.write(`
 </li>
         <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.toxicity.toxicity.ToxicityMetrics.html#langfair.metrics.toxicity.toxicity.ToxicityMetrics.evaluate">(langfair.metrics.toxicity.toxicity.ToxicityMetrics method)</a>, <a href="_autosummary/langfair.metrics.toxicity.toxicity.ToxicityMetrics.html#langfair.metrics.toxicity.toxicity.ToxicityMetrics.evaluate">[1]</a>
 </li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.auto.auto.AutoEval.html#llambda.auto.auto.AutoEval.evaluate">(llambda.auto.auto.AutoEval method)</a>, <a href="_autosummary/llambda.auto.auto.AutoEval.html#llambda.auto.auto.AutoEval.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.classification.ClassificationMetrics.html#llambda.metrics.classification.classification.ClassificationMetrics.evaluate">(llambda.metrics.classification.classification.ClassificationMetrics method)</a>, <a href="_autosummary/llambda.metrics.classification.classification.ClassificationMetrics.html#llambda.metrics.classification.classification.ClassificationMetrics.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.baseclass.metrics.Metric.html#llambda.metrics.classification.metrics.baseclass.metrics.Metric.evaluate">(llambda.metrics.classification.metrics.baseclass.metrics.Metric method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.baseclass.metrics.Metric.html#llambda.metrics.classification.metrics.baseclass.metrics.Metric.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.html#llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.evaluate">(llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.html#llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity.html#llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity.evaluate">(llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity.html#llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity.html#llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity.evaluate">(llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity.html#llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity.html#llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity.evaluate">(llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity.html#llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.html#llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.evaluate">(llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity method)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.html#llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.html#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.evaluate">(llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.html#llambda.metrics.counterfactual.counterfactual.CounterfactualMetrics.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric.html#llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric.evaluate">(llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric.html#llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity.html#llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity.evaluate">(llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity.html#llambda.metrics.counterfactual.metrics.bleu.BleuSimilarity.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity.html#llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity.evaluate">(llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity.html#llambda.metrics.counterfactual.metrics.cosine.CosineSimilarity.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity.html#llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity.evaluate">(llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity.html#llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias.html#llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias.evaluate">(llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias method)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias.html#llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.baseclass.metrics.Metric.html#llambda.metrics.recommendation.metrics.baseclass.metrics.Metric.evaluate">(llambda.metrics.recommendation.metrics.baseclass.metrics.Metric method)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.baseclass.metrics.Metric.html#llambda.metrics.recommendation.metrics.baseclass.metrics.Metric.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity.html#llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity.evaluate">(llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity method)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity.html#llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.prag.PRAG.html#llambda.metrics.recommendation.metrics.prag.PRAG.evaluate">(llambda.metrics.recommendation.metrics.prag.PRAG method)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.prag.PRAG.html#llambda.metrics.recommendation.metrics.prag.PRAG.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.serp.SERP.html#llambda.metrics.recommendation.metrics.serp.SERP.evaluate">(llambda.metrics.recommendation.metrics.serp.SERP method)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.serp.SERP.html#llambda.metrics.recommendation.metrics.serp.SERP.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations.html#llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations.evaluate">(llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations method)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations.html#llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.baseclass.metrics.Metric.html#llambda.metrics.stereotype.metrics.baseclass.metrics.Metric.evaluate">(llambda.metrics.stereotype.metrics.baseclass.metrics.Metric method)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.baseclass.metrics.Metric.html#llambda.metrics.stereotype.metrics.baseclass.metrics.Metric.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.evaluate">(llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier method)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.html#llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.evaluate">(llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric method)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.html#llambda.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.stereotype.StereotypeMetrics.html#llambda.metrics.stereotype.stereotype.StereotypeMetrics.evaluate">(llambda.metrics.stereotype.stereotype.StereotypeMetrics method)</a>, <a href="_autosummary/llambda.metrics.stereotype.stereotype.StereotypeMetrics.html#llambda.metrics.stereotype.stereotype.StereotypeMetrics.evaluate">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.toxicity.toxicity.ToxicityMetrics.html#llambda.metrics.toxicity.toxicity.ToxicityMetrics.evaluate">(llambda.metrics.toxicity.toxicity.ToxicityMetrics method)</a>, <a href="_autosummary/llambda.metrics.toxicity.toxicity.ToxicityMetrics.html#llambda.metrics.toxicity.toxicity.ToxicityMetrics.evaluate">[1]</a>
-</li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.recommendation.recommendation.RecommendationMetrics.html#langfair.metrics.recommendation.recommendation.RecommendationMetrics.evaluate_against_neutral">evaluate_against_neutral() (langfair.metrics.recommendation.recommendation.RecommendationMetrics method)</a>, <a href="_autosummary/langfair.metrics.recommendation.recommendation.RecommendationMetrics.html#langfair.metrics.recommendation.recommendation.RecommendationMetrics.evaluate_against_neutral">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.recommendation.RecommendationMetrics.html#llambda.metrics.recommendation.recommendation.RecommendationMetrics.evaluate_against_neutral">(llambda.metrics.recommendation.recommendation.RecommendationMetrics method)</a>, <a href="_autosummary/llambda.metrics.recommendation.recommendation.RecommendationMetrics.html#llambda.metrics.recommendation.recommendation.RecommendationMetrics.evaluate_against_neutral">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.recommendation.recommendation.RecommendationMetrics.html#langfair.metrics.recommendation.recommendation.RecommendationMetrics.evaluate_pairwise">evaluate_pairwise() (langfair.metrics.recommendation.recommendation.RecommendationMetrics method)</a>, <a href="_autosummary/langfair.metrics.recommendation.recommendation.RecommendationMetrics.html#langfair.metrics.recommendation.recommendation.RecommendationMetrics.evaluate_pairwise">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.recommendation.RecommendationMetrics.html#llambda.metrics.recommendation.recommendation.RecommendationMetrics.evaluate_pairwise">(llambda.metrics.recommendation.recommendation.RecommendationMetrics method)</a>, <a href="_autosummary/llambda.metrics.recommendation.recommendation.RecommendationMetrics.html#llambda.metrics.recommendation.recommendation.RecommendationMetrics.evaluate_pairwise">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.auto.auto.AutoEval.html#langfair.auto.auto.AutoEval.export_results">export_results() (langfair.auto.auto.AutoEval method)</a>, <a href="_autosummary/langfair.auto.auto.AutoEval.html#langfair.auto.auto.AutoEval.export_results">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.auto.auto.AutoEval.html#llambda.auto.auto.AutoEval.export_results">(llambda.auto.auto.AutoEval method)</a>, <a href="_autosummary/llambda.auto.auto.AutoEval.html#llambda.auto.auto.AutoEval.export_results">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -674,31 +497,15 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.html#langfair.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity">FalseDiscoveryRateParity (class in langfair.metrics.classification.metrics.false_discovery)</a>, <a href="_autosummary/langfair.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.html#langfair.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.html#llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity">(class in llambda.metrics.classification.metrics.false_discovery)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity.html#llambda.metrics.classification.metrics.false_discovery.FalseDiscoveryRateParity">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.classification.metrics.false_negative.FalseNegativeRateParity.html#langfair.metrics.classification.metrics.false_negative.FalseNegativeRateParity">FalseNegativeRateParity (class in langfair.metrics.classification.metrics.false_negative)</a>, <a href="_autosummary/langfair.metrics.classification.metrics.false_negative.FalseNegativeRateParity.html#langfair.metrics.classification.metrics.false_negative.FalseNegativeRateParity">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity.html#llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity">(class in llambda.metrics.classification.metrics.false_negative)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity.html#llambda.metrics.classification.metrics.false_negative.FalseNegativeRateParity">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.classification.metrics.false_omission.FalseOmissionRateParity.html#langfair.metrics.classification.metrics.false_omission.FalseOmissionRateParity">FalseOmissionRateParity (class in langfair.metrics.classification.metrics.false_omission)</a>, <a href="_autosummary/langfair.metrics.classification.metrics.false_omission.FalseOmissionRateParity.html#langfair.metrics.classification.metrics.false_omission.FalseOmissionRateParity">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity.html#llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity">(class in llambda.metrics.classification.metrics.false_omission)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity.html#llambda.metrics.classification.metrics.false_omission.FalseOmissionRateParity">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.classification.metrics.false_positive.FalsePositiveRateParity.html#langfair.metrics.classification.metrics.false_positive.FalsePositiveRateParity">FalsePositiveRateParity (class in langfair.metrics.classification.metrics.false_positive)</a>, <a href="_autosummary/langfair.metrics.classification.metrics.false_positive.FalsePositiveRateParity.html#langfair.metrics.classification.metrics.false_positive.FalsePositiveRateParity">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity.html#llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity">(class in llambda.metrics.classification.metrics.false_positive)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity.html#llambda.metrics.classification.metrics.false_positive.FalsePositiveRateParity">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -710,25 +517,13 @@ document.write(`
       <ul>
         <li><a href=".ipynb_checkpoints/_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator.generate_responses">(langfair.generator.generator.ResponseGenerator method)</a>, <a href="_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator.generate_responses">[1]</a>
 </li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.generate_responses">(llambda.generator.counterfactual.CounterfactualGenerator method)</a>, <a href="_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.generate_responses">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.generator.ResponseGenerator.html#llambda.generator.generator.ResponseGenerator.generate_responses">(llambda.generator.generator.ResponseGenerator method)</a>, <a href="_autosummary/llambda.generator.generator.ResponseGenerator.html#llambda.generator.generator.ResponseGenerator.generate_responses">[1]</a>
-</li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier.get_stereotype_scores">get_stereotype_scores() (langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier method)</a>, <a href="_autosummary/langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier.get_stereotype_scores">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.get_stereotype_scores">(llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier method)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.get_stereotype_scores">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.toxicity.toxicity.ToxicityMetrics.html#langfair.metrics.toxicity.toxicity.ToxicityMetrics.get_toxicity_scores">get_toxicity_scores() (langfair.metrics.toxicity.toxicity.ToxicityMetrics method)</a>, <a href="_autosummary/langfair.metrics.toxicity.toxicity.ToxicityMetrics.html#langfair.metrics.toxicity.toxicity.ToxicityMetrics.get_toxicity_scores">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.toxicity.toxicity.ToxicityMetrics.html#llambda.metrics.toxicity.toxicity.ToxicityMetrics.get_toxicity_scores">(llambda.metrics.toxicity.toxicity.ToxicityMetrics method)</a>, <a href="_autosummary/llambda.metrics.toxicity.toxicity.ToxicityMetrics.html#llambda.metrics.toxicity.toxicity.ToxicityMetrics.get_toxicity_scores">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -736,11 +531,7 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.recommendation.metrics.jaccard.JaccardSimilarity.html#langfair.metrics.recommendation.metrics.jaccard.JaccardSimilarity">JaccardSimilarity (class in langfair.metrics.recommendation.metrics.jaccard)</a>, <a href="_autosummary/langfair.metrics.recommendation.metrics.jaccard.JaccardSimilarity.html#langfair.metrics.recommendation.metrics.jaccard.JaccardSimilarity">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity.html#llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity">(class in llambda.metrics.recommendation.metrics.jaccard)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity.html#llambda.metrics.recommendation.metrics.jaccard.JaccardSimilarity">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -908,6 +699,8 @@ document.write(`
         <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.counterfactual.metrics.baseclass.html#module-langfair.metrics.counterfactual.metrics.baseclass">module</a>, <a href="_autosummary/langfair.metrics.counterfactual.metrics.baseclass.html#module-langfair.metrics.counterfactual.metrics.baseclass">[1]</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     langfair.metrics.counterfactual.metrics.baseclass.metrics
 
@@ -1070,330 +863,6 @@ document.write(`
 </li>
       </ul></li>
   </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
-    llambda.auto
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.auto.html#module-llambda.auto">module</a>, <a href="_autosummary/llambda.auto.html#module-llambda.auto">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.auto.auto
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.auto.auto.html#module-llambda.auto.auto">module</a>, <a href="_autosummary/llambda.auto.auto.html#module-llambda.auto.auto">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.constants
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.constants.html#module-llambda.constants">module</a>, <a href="_autosummary/llambda.constants.html#module-llambda.constants">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.constants.cost_data
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.constants.cost_data.html#module-llambda.constants.cost_data">module</a>, <a href="_autosummary/llambda.constants.cost_data.html#module-llambda.constants.cost_data">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.constants.word_lists
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.constants.word_lists.html#module-llambda.constants.word_lists">module</a>, <a href="_autosummary/llambda.constants.word_lists.html#module-llambda.constants.word_lists">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.generator
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.html#module-llambda.generator">module</a>, <a href="_autosummary/llambda.generator.html#module-llambda.generator">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.generator.counterfactual
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.counterfactual.html#module-llambda.generator.counterfactual">module</a>, <a href="_autosummary/llambda.generator.counterfactual.html#module-llambda.generator.counterfactual">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.generator.generator
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.generator.html#module-llambda.generator.generator">module</a>, <a href="_autosummary/llambda.generator.generator.html#module-llambda.generator.generator">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.html#module-llambda.metrics">module</a>, <a href="_autosummary/llambda.metrics.html#module-llambda.metrics">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.classification
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.html#module-llambda.metrics.classification">module</a>, <a href="_autosummary/llambda.metrics.classification.html#module-llambda.metrics.classification">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.classification.classification
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.classification.html#module-llambda.metrics.classification.classification">module</a>, <a href="_autosummary/llambda.metrics.classification.classification.html#module-llambda.metrics.classification.classification">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.classification.metrics
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.html#module-llambda.metrics.classification.metrics">module</a>, <a href="_autosummary/llambda.metrics.classification.metrics.html#module-llambda.metrics.classification.metrics">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.classification.metrics.baseclass
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.baseclass.html#module-llambda.metrics.classification.metrics.baseclass">module</a>, <a href="_autosummary/llambda.metrics.classification.metrics.baseclass.html#module-llambda.metrics.classification.metrics.baseclass">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.classification.metrics.baseclass.metrics
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.baseclass.metrics.html#module-llambda.metrics.classification.metrics.baseclass.metrics">module</a>, <a href="_autosummary/llambda.metrics.classification.metrics.baseclass.metrics.html#module-llambda.metrics.classification.metrics.baseclass.metrics">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.classification.metrics.false_discovery
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_discovery.html#module-llambda.metrics.classification.metrics.false_discovery">module</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_discovery.html#module-llambda.metrics.classification.metrics.false_discovery">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.classification.metrics.false_negative
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_negative.html#module-llambda.metrics.classification.metrics.false_negative">module</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_negative.html#module-llambda.metrics.classification.metrics.false_negative">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.classification.metrics.false_omission
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_omission.html#module-llambda.metrics.classification.metrics.false_omission">module</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_omission.html#module-llambda.metrics.classification.metrics.false_omission">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.classification.metrics.false_positive
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_positive.html#module-llambda.metrics.classification.metrics.false_positive">module</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_positive.html#module-llambda.metrics.classification.metrics.false_positive">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.classification.metrics.predicted_prevalence
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.predicted_prevalence.html#module-llambda.metrics.classification.metrics.predicted_prevalence">module</a>, <a href="_autosummary/llambda.metrics.classification.metrics.predicted_prevalence.html#module-llambda.metrics.classification.metrics.predicted_prevalence">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.counterfactual
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.html#module-llambda.metrics.counterfactual">module</a>, <a href="_autosummary/llambda.metrics.counterfactual.html#module-llambda.metrics.counterfactual">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.counterfactual.counterfactual
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.counterfactual.html#module-llambda.metrics.counterfactual.counterfactual">module</a>, <a href="_autosummary/llambda.metrics.counterfactual.counterfactual.html#module-llambda.metrics.counterfactual.counterfactual">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.counterfactual.metrics
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.html#module-llambda.metrics.counterfactual.metrics">module</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.html#module-llambda.metrics.counterfactual.metrics">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.counterfactual.metrics.baseclass
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.baseclass.html#module-llambda.metrics.counterfactual.metrics.baseclass">module</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.baseclass.html#module-llambda.metrics.counterfactual.metrics.baseclass">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.counterfactual.metrics.baseclass.metrics
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.baseclass.metrics.html#module-llambda.metrics.counterfactual.metrics.baseclass.metrics">module</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.baseclass.metrics.html#module-llambda.metrics.counterfactual.metrics.baseclass.metrics">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.counterfactual.metrics.bleu
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.bleu.html#module-llambda.metrics.counterfactual.metrics.bleu">module</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.bleu.html#module-llambda.metrics.counterfactual.metrics.bleu">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.counterfactual.metrics.cosine
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.cosine.html#module-llambda.metrics.counterfactual.metrics.cosine">module</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.cosine.html#module-llambda.metrics.counterfactual.metrics.cosine">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.counterfactual.metrics.rougel
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.rougel.html#module-llambda.metrics.counterfactual.metrics.rougel">module</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.rougel.html#module-llambda.metrics.counterfactual.metrics.rougel">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.counterfactual.metrics.sentimentbias
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.sentimentbias.html#module-llambda.metrics.counterfactual.metrics.sentimentbias">module</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.sentimentbias.html#module-llambda.metrics.counterfactual.metrics.sentimentbias">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.recommendation
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.html#module-llambda.metrics.recommendation">module</a>, <a href="_autosummary/llambda.metrics.recommendation.html#module-llambda.metrics.recommendation">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.recommendation.metrics
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.html#module-llambda.metrics.recommendation.metrics">module</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.html#module-llambda.metrics.recommendation.metrics">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.recommendation.metrics.baseclass
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.baseclass.html#module-llambda.metrics.recommendation.metrics.baseclass">module</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.baseclass.html#module-llambda.metrics.recommendation.metrics.baseclass">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.recommendation.metrics.baseclass.metrics
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.baseclass.metrics.html#module-llambda.metrics.recommendation.metrics.baseclass.metrics">module</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.baseclass.metrics.html#module-llambda.metrics.recommendation.metrics.baseclass.metrics">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.recommendation.metrics.jaccard
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.jaccard.html#module-llambda.metrics.recommendation.metrics.jaccard">module</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.jaccard.html#module-llambda.metrics.recommendation.metrics.jaccard">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.recommendation.metrics.prag
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.prag.html#module-llambda.metrics.recommendation.metrics.prag">module</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.prag.html#module-llambda.metrics.recommendation.metrics.prag">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.recommendation.metrics.serp
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.serp.html#module-llambda.metrics.recommendation.metrics.serp">module</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.serp.html#module-llambda.metrics.recommendation.metrics.serp">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.recommendation.recommendation
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.recommendation.html#module-llambda.metrics.recommendation.recommendation">module</a>, <a href="_autosummary/llambda.metrics.recommendation.recommendation.html#module-llambda.metrics.recommendation.recommendation">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.stereotype
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.html#module-llambda.metrics.stereotype">module</a>, <a href="_autosummary/llambda.metrics.stereotype.html#module-llambda.metrics.stereotype">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.stereotype.metrics
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.html#module-llambda.metrics.stereotype.metrics">module</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.html#module-llambda.metrics.stereotype.metrics">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.stereotype.metrics.associations
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.associations.html#module-llambda.metrics.stereotype.metrics.associations">module</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.associations.html#module-llambda.metrics.stereotype.metrics.associations">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.stereotype.metrics.baseclass
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.baseclass.html#module-llambda.metrics.stereotype.metrics.baseclass">module</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.baseclass.html#module-llambda.metrics.stereotype.metrics.baseclass">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.stereotype.metrics.baseclass.metrics
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.baseclass.metrics.html#module-llambda.metrics.stereotype.metrics.baseclass.metrics">module</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.baseclass.metrics.html#module-llambda.metrics.stereotype.metrics.baseclass.metrics">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.stereotype.metrics.classifier
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.classifier.html#module-llambda.metrics.stereotype.metrics.classifier">module</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.classifier.html#module-llambda.metrics.stereotype.metrics.classifier">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.stereotype.metrics.cooccurrence
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.cooccurrence.html#module-llambda.metrics.stereotype.metrics.cooccurrence">module</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.cooccurrence.html#module-llambda.metrics.stereotype.metrics.cooccurrence">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.stereotype.stereotype
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.stereotype.html#module-llambda.metrics.stereotype.stereotype">module</a>, <a href="_autosummary/llambda.metrics.stereotype.stereotype.html#module-llambda.metrics.stereotype.stereotype">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.toxicity
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.toxicity.html#module-llambda.metrics.toxicity">module</a>, <a href="_autosummary/llambda.metrics.toxicity.html#module-llambda.metrics.toxicity">[1]</a>
-</li>
-      </ul></li>
-      <li>
-    llambda.metrics.toxicity.toxicity
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.toxicity.toxicity.html#module-llambda.metrics.toxicity.toxicity">module</a>, <a href="_autosummary/llambda.metrics.toxicity.toxicity.html#module-llambda.metrics.toxicity.toxicity">[1]</a>
-</li>
-      </ul></li>
-  </ul></td>
 </tr></table>
 
 <h2 id="M">M</h2>
@@ -1407,14 +876,6 @@ document.write(`
         <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.recommendation.metrics.baseclass.metrics.Metric.html#langfair.metrics.recommendation.metrics.baseclass.metrics.Metric">(class in langfair.metrics.recommendation.metrics.baseclass.metrics)</a>, <a href="_autosummary/langfair.metrics.recommendation.metrics.baseclass.metrics.Metric.html#langfair.metrics.recommendation.metrics.baseclass.metrics.Metric">[1]</a>
 </li>
         <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.stereotype.metrics.baseclass.metrics.Metric.html#langfair.metrics.stereotype.metrics.baseclass.metrics.Metric">(class in langfair.metrics.stereotype.metrics.baseclass.metrics)</a>, <a href="_autosummary/langfair.metrics.stereotype.metrics.baseclass.metrics.Metric.html#langfair.metrics.stereotype.metrics.baseclass.metrics.Metric">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.baseclass.metrics.Metric.html#llambda.metrics.classification.metrics.baseclass.metrics.Metric">(class in llambda.metrics.classification.metrics.baseclass.metrics)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.baseclass.metrics.Metric.html#llambda.metrics.classification.metrics.baseclass.metrics.Metric">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric.html#llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric">(class in llambda.metrics.counterfactual.metrics.baseclass.metrics)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric.html#llambda.metrics.counterfactual.metrics.baseclass.metrics.Metric">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.baseclass.metrics.Metric.html#llambda.metrics.recommendation.metrics.baseclass.metrics.Metric">(class in llambda.metrics.recommendation.metrics.baseclass.metrics)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.baseclass.metrics.Metric.html#llambda.metrics.recommendation.metrics.baseclass.metrics.Metric">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.baseclass.metrics.Metric.html#llambda.metrics.stereotype.metrics.baseclass.metrics.Metric">(class in llambda.metrics.stereotype.metrics.baseclass.metrics)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.baseclass.metrics.Metric.html#llambda.metrics.stereotype.metrics.baseclass.metrics.Metric">[1]</a>
 </li>
       </ul></li>
       <li>
@@ -1513,98 +974,6 @@ document.write(`
 </li>
         <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.toxicity.toxicity.html#module-langfair.metrics.toxicity.toxicity">langfair.metrics.toxicity.toxicity</a>, <a href="_autosummary/langfair.metrics.toxicity.toxicity.html#module-langfair.metrics.toxicity.toxicity">[1]</a>
 </li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.auto.html#module-llambda.auto">llambda.auto</a>, <a href="_autosummary/llambda.auto.html#module-llambda.auto">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.auto.auto.html#module-llambda.auto.auto">llambda.auto.auto</a>, <a href="_autosummary/llambda.auto.auto.html#module-llambda.auto.auto">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.constants.html#module-llambda.constants">llambda.constants</a>, <a href="_autosummary/llambda.constants.html#module-llambda.constants">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.constants.cost_data.html#module-llambda.constants.cost_data">llambda.constants.cost_data</a>, <a href="_autosummary/llambda.constants.cost_data.html#module-llambda.constants.cost_data">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.constants.word_lists.html#module-llambda.constants.word_lists">llambda.constants.word_lists</a>, <a href="_autosummary/llambda.constants.word_lists.html#module-llambda.constants.word_lists">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.html#module-llambda.generator">llambda.generator</a>, <a href="_autosummary/llambda.generator.html#module-llambda.generator">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.counterfactual.html#module-llambda.generator.counterfactual">llambda.generator.counterfactual</a>, <a href="_autosummary/llambda.generator.counterfactual.html#module-llambda.generator.counterfactual">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.generator.html#module-llambda.generator.generator">llambda.generator.generator</a>, <a href="_autosummary/llambda.generator.generator.html#module-llambda.generator.generator">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.html#module-llambda.metrics">llambda.metrics</a>, <a href="_autosummary/llambda.metrics.html#module-llambda.metrics">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.html#module-llambda.metrics.classification">llambda.metrics.classification</a>, <a href="_autosummary/llambda.metrics.classification.html#module-llambda.metrics.classification">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.classification.html#module-llambda.metrics.classification.classification">llambda.metrics.classification.classification</a>, <a href="_autosummary/llambda.metrics.classification.classification.html#module-llambda.metrics.classification.classification">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.html#module-llambda.metrics.classification.metrics">llambda.metrics.classification.metrics</a>, <a href="_autosummary/llambda.metrics.classification.metrics.html#module-llambda.metrics.classification.metrics">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.baseclass.html#module-llambda.metrics.classification.metrics.baseclass">llambda.metrics.classification.metrics.baseclass</a>, <a href="_autosummary/llambda.metrics.classification.metrics.baseclass.html#module-llambda.metrics.classification.metrics.baseclass">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.baseclass.metrics.html#module-llambda.metrics.classification.metrics.baseclass.metrics">llambda.metrics.classification.metrics.baseclass.metrics</a>, <a href="_autosummary/llambda.metrics.classification.metrics.baseclass.metrics.html#module-llambda.metrics.classification.metrics.baseclass.metrics">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_discovery.html#module-llambda.metrics.classification.metrics.false_discovery">llambda.metrics.classification.metrics.false_discovery</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_discovery.html#module-llambda.metrics.classification.metrics.false_discovery">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_negative.html#module-llambda.metrics.classification.metrics.false_negative">llambda.metrics.classification.metrics.false_negative</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_negative.html#module-llambda.metrics.classification.metrics.false_negative">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_omission.html#module-llambda.metrics.classification.metrics.false_omission">llambda.metrics.classification.metrics.false_omission</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_omission.html#module-llambda.metrics.classification.metrics.false_omission">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.false_positive.html#module-llambda.metrics.classification.metrics.false_positive">llambda.metrics.classification.metrics.false_positive</a>, <a href="_autosummary/llambda.metrics.classification.metrics.false_positive.html#module-llambda.metrics.classification.metrics.false_positive">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.predicted_prevalence.html#module-llambda.metrics.classification.metrics.predicted_prevalence">llambda.metrics.classification.metrics.predicted_prevalence</a>, <a href="_autosummary/llambda.metrics.classification.metrics.predicted_prevalence.html#module-llambda.metrics.classification.metrics.predicted_prevalence">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.html#module-llambda.metrics.counterfactual">llambda.metrics.counterfactual</a>, <a href="_autosummary/llambda.metrics.counterfactual.html#module-llambda.metrics.counterfactual">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.counterfactual.html#module-llambda.metrics.counterfactual.counterfactual">llambda.metrics.counterfactual.counterfactual</a>, <a href="_autosummary/llambda.metrics.counterfactual.counterfactual.html#module-llambda.metrics.counterfactual.counterfactual">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.html#module-llambda.metrics.counterfactual.metrics">llambda.metrics.counterfactual.metrics</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.html#module-llambda.metrics.counterfactual.metrics">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.baseclass.html#module-llambda.metrics.counterfactual.metrics.baseclass">llambda.metrics.counterfactual.metrics.baseclass</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.baseclass.html#module-llambda.metrics.counterfactual.metrics.baseclass">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.baseclass.metrics.html#module-llambda.metrics.counterfactual.metrics.baseclass.metrics">llambda.metrics.counterfactual.metrics.baseclass.metrics</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.baseclass.metrics.html#module-llambda.metrics.counterfactual.metrics.baseclass.metrics">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.bleu.html#module-llambda.metrics.counterfactual.metrics.bleu">llambda.metrics.counterfactual.metrics.bleu</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.bleu.html#module-llambda.metrics.counterfactual.metrics.bleu">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.cosine.html#module-llambda.metrics.counterfactual.metrics.cosine">llambda.metrics.counterfactual.metrics.cosine</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.cosine.html#module-llambda.metrics.counterfactual.metrics.cosine">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.rougel.html#module-llambda.metrics.counterfactual.metrics.rougel">llambda.metrics.counterfactual.metrics.rougel</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.rougel.html#module-llambda.metrics.counterfactual.metrics.rougel">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.sentimentbias.html#module-llambda.metrics.counterfactual.metrics.sentimentbias">llambda.metrics.counterfactual.metrics.sentimentbias</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.sentimentbias.html#module-llambda.metrics.counterfactual.metrics.sentimentbias">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.html#module-llambda.metrics.recommendation">llambda.metrics.recommendation</a>, <a href="_autosummary/llambda.metrics.recommendation.html#module-llambda.metrics.recommendation">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.html#module-llambda.metrics.recommendation.metrics">llambda.metrics.recommendation.metrics</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.html#module-llambda.metrics.recommendation.metrics">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.baseclass.html#module-llambda.metrics.recommendation.metrics.baseclass">llambda.metrics.recommendation.metrics.baseclass</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.baseclass.html#module-llambda.metrics.recommendation.metrics.baseclass">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.baseclass.metrics.html#module-llambda.metrics.recommendation.metrics.baseclass.metrics">llambda.metrics.recommendation.metrics.baseclass.metrics</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.baseclass.metrics.html#module-llambda.metrics.recommendation.metrics.baseclass.metrics">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.jaccard.html#module-llambda.metrics.recommendation.metrics.jaccard">llambda.metrics.recommendation.metrics.jaccard</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.jaccard.html#module-llambda.metrics.recommendation.metrics.jaccard">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.prag.html#module-llambda.metrics.recommendation.metrics.prag">llambda.metrics.recommendation.metrics.prag</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.prag.html#module-llambda.metrics.recommendation.metrics.prag">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.serp.html#module-llambda.metrics.recommendation.metrics.serp">llambda.metrics.recommendation.metrics.serp</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.serp.html#module-llambda.metrics.recommendation.metrics.serp">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.recommendation.html#module-llambda.metrics.recommendation.recommendation">llambda.metrics.recommendation.recommendation</a>, <a href="_autosummary/llambda.metrics.recommendation.recommendation.html#module-llambda.metrics.recommendation.recommendation">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.html#module-llambda.metrics.stereotype">llambda.metrics.stereotype</a>, <a href="_autosummary/llambda.metrics.stereotype.html#module-llambda.metrics.stereotype">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.html#module-llambda.metrics.stereotype.metrics">llambda.metrics.stereotype.metrics</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.html#module-llambda.metrics.stereotype.metrics">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.associations.html#module-llambda.metrics.stereotype.metrics.associations">llambda.metrics.stereotype.metrics.associations</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.associations.html#module-llambda.metrics.stereotype.metrics.associations">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.baseclass.html#module-llambda.metrics.stereotype.metrics.baseclass">llambda.metrics.stereotype.metrics.baseclass</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.baseclass.html#module-llambda.metrics.stereotype.metrics.baseclass">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.baseclass.metrics.html#module-llambda.metrics.stereotype.metrics.baseclass.metrics">llambda.metrics.stereotype.metrics.baseclass.metrics</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.baseclass.metrics.html#module-llambda.metrics.stereotype.metrics.baseclass.metrics">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.classifier.html#module-llambda.metrics.stereotype.metrics.classifier">llambda.metrics.stereotype.metrics.classifier</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.classifier.html#module-llambda.metrics.stereotype.metrics.classifier">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.cooccurrence.html#module-llambda.metrics.stereotype.metrics.cooccurrence">llambda.metrics.stereotype.metrics.cooccurrence</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.cooccurrence.html#module-llambda.metrics.stereotype.metrics.cooccurrence">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.stereotype.html#module-llambda.metrics.stereotype.stereotype">llambda.metrics.stereotype.stereotype</a>, <a href="_autosummary/llambda.metrics.stereotype.stereotype.html#module-llambda.metrics.stereotype.stereotype">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.toxicity.html#module-llambda.metrics.toxicity">llambda.metrics.toxicity</a>, <a href="_autosummary/llambda.metrics.toxicity.html#module-llambda.metrics.toxicity">[1]</a>
-</li>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.toxicity.toxicity.html#module-llambda.metrics.toxicity.toxicity">llambda.metrics.toxicity.toxicity</a>, <a href="_autosummary/llambda.metrics.toxicity.toxicity.html#module-llambda.metrics.toxicity.toxicity">[1]</a>
-</li>
       </ul></li>
   </ul></td>
 </tr></table>
@@ -1613,11 +982,7 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.generator.counterfactual.CounterfactualGenerator.html#langfair.generator.counterfactual.CounterfactualGenerator.neutralize_tokens">neutralize_tokens() (langfair.generator.counterfactual.CounterfactualGenerator method)</a>, <a href="_autosummary/langfair.generator.counterfactual.CounterfactualGenerator.html#langfair.generator.counterfactual.CounterfactualGenerator.neutralize_tokens">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.neutralize_tokens">(llambda.generator.counterfactual.CounterfactualGenerator method)</a>, <a href="_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.neutralize_tokens">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -1625,31 +990,15 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.generator.counterfactual.CounterfactualGenerator.html#langfair.generator.counterfactual.CounterfactualGenerator.parse_texts">parse_texts() (langfair.generator.counterfactual.CounterfactualGenerator method)</a>, <a href="_autosummary/langfair.generator.counterfactual.CounterfactualGenerator.html#langfair.generator.counterfactual.CounterfactualGenerator.parse_texts">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.parse_texts">(llambda.generator.counterfactual.CounterfactualGenerator method)</a>, <a href="_autosummary/llambda.generator.counterfactual.CounterfactualGenerator.html#llambda.generator.counterfactual.CounterfactualGenerator.parse_texts">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.recommendation.metrics.prag.PRAG.html#langfair.metrics.recommendation.metrics.prag.PRAG">PRAG (class in langfair.metrics.recommendation.metrics.prag)</a>, <a href="_autosummary/langfair.metrics.recommendation.metrics.prag.PRAG.html#langfair.metrics.recommendation.metrics.prag.PRAG">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.prag.PRAG.html#llambda.metrics.recommendation.metrics.prag.PRAG">(class in llambda.metrics.recommendation.metrics.prag)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.prag.PRAG.html#llambda.metrics.recommendation.metrics.prag.PRAG">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.html#langfair.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity">PredictedPrevalenceRateParity (class in langfair.metrics.classification.metrics.predicted_prevalence)</a>, <a href="_autosummary/langfair.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.html#langfair.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.html#llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity">(class in llambda.metrics.classification.metrics.predicted_prevalence)</a>, <a href="_autosummary/llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity.html#llambda.metrics.classification.metrics.predicted_prevalence.PredictedPrevalenceRateParity">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.auto.auto.AutoEval.html#langfair.auto.auto.AutoEval.print_results">print_results() (langfair.auto.auto.AutoEval method)</a>, <a href="_autosummary/langfair.auto.auto.AutoEval.html#langfair.auto.auto.AutoEval.print_results">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.auto.auto.AutoEval.html#llambda.auto.auto.AutoEval.print_results">(llambda.auto.auto.AutoEval method)</a>, <a href="_autosummary/llambda.auto.auto.AutoEval.html#llambda.auto.auto.AutoEval.print_results">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -1657,25 +1006,13 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.recommendation.recommendation.RecommendationMetrics.html#langfair.metrics.recommendation.recommendation.RecommendationMetrics">RecommendationMetrics (class in langfair.metrics.recommendation.recommendation)</a>, <a href="_autosummary/langfair.metrics.recommendation.recommendation.RecommendationMetrics.html#langfair.metrics.recommendation.recommendation.RecommendationMetrics">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.recommendation.RecommendationMetrics.html#llambda.metrics.recommendation.recommendation.RecommendationMetrics">(class in llambda.metrics.recommendation.recommendation)</a>, <a href="_autosummary/llambda.metrics.recommendation.recommendation.RecommendationMetrics.html#llambda.metrics.recommendation.recommendation.RecommendationMetrics">[1]</a>
 </li>
-      </ul></li>
-      <li><a href=".ipynb_checkpoints/_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator">ResponseGenerator (class in langfair.generator.generator)</a>, <a href="_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.generator.generator.ResponseGenerator.html#llambda.generator.generator.ResponseGenerator">(class in llambda.generator.generator)</a>, <a href="_autosummary/llambda.generator.generator.ResponseGenerator.html#llambda.generator.generator.ResponseGenerator">[1]</a>
-</li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.counterfactual.metrics.rougel.RougelSimilarity.html#langfair.metrics.counterfactual.metrics.rougel.RougelSimilarity">RougelSimilarity (class in langfair.metrics.counterfactual.metrics.rougel)</a>, <a href="_autosummary/langfair.metrics.counterfactual.metrics.rougel.RougelSimilarity.html#langfair.metrics.counterfactual.metrics.rougel.RougelSimilarity">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity.html#llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity">(class in llambda.metrics.counterfactual.metrics.rougel)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity.html#llambda.metrics.counterfactual.metrics.rougel.RougelSimilarity">[1]</a>
+      <li><a href=".ipynb_checkpoints/_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator">ResponseGenerator (class in langfair.generator.generator)</a>, <a href="_autosummary/langfair.generator.generator.ResponseGenerator.html#langfair.generator.generator.ResponseGenerator">[1]</a>
 </li>
-      </ul></li>
+      <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.counterfactual.metrics.rougel.RougelSimilarity.html#langfair.metrics.counterfactual.metrics.rougel.RougelSimilarity">RougelSimilarity (class in langfair.metrics.counterfactual.metrics.rougel)</a>, <a href="_autosummary/langfair.metrics.counterfactual.metrics.rougel.RougelSimilarity.html#langfair.metrics.counterfactual.metrics.rougel.RougelSimilarity">[1]</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -1683,37 +1020,17 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.counterfactual.metrics.sentimentbias.SentimentBias.html#langfair.metrics.counterfactual.metrics.sentimentbias.SentimentBias">SentimentBias (class in langfair.metrics.counterfactual.metrics.sentimentbias)</a>, <a href="_autosummary/langfair.metrics.counterfactual.metrics.sentimentbias.SentimentBias.html#langfair.metrics.counterfactual.metrics.sentimentbias.SentimentBias">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias.html#llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias">(class in llambda.metrics.counterfactual.metrics.sentimentbias)</a>, <a href="_autosummary/llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias.html#llambda.metrics.counterfactual.metrics.sentimentbias.SentimentBias">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.recommendation.metrics.serp.SERP.html#langfair.metrics.recommendation.metrics.serp.SERP">SERP (class in langfair.metrics.recommendation.metrics.serp)</a>, <a href="_autosummary/langfair.metrics.recommendation.metrics.serp.SERP.html#langfair.metrics.recommendation.metrics.serp.SERP">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.recommendation.metrics.serp.SERP.html#llambda.metrics.recommendation.metrics.serp.SERP">(class in llambda.metrics.recommendation.metrics.serp)</a>, <a href="_autosummary/llambda.metrics.recommendation.metrics.serp.SERP.html#llambda.metrics.recommendation.metrics.serp.SERP">[1]</a>
 </li>
-      </ul></li>
-      <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier">StereotypeClassifier (class in langfair.metrics.stereotype.metrics.classifier)</a>, <a href="_autosummary/langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier">(class in llambda.metrics.stereotype.metrics.classifier)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#llambda.metrics.stereotype.metrics.classifier.StereotypeClassifier">[1]</a>
-</li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier">StereotypeClassifier (class in langfair.metrics.stereotype.metrics.classifier)</a>, <a href="_autosummary/langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier.html#langfair.metrics.stereotype.metrics.classifier.StereotypeClassifier">[1]</a>
+</li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.stereotype.stereotype.StereotypeMetrics.html#langfair.metrics.stereotype.stereotype.StereotypeMetrics">StereotypeMetrics (class in langfair.metrics.stereotype.stereotype)</a>, <a href="_autosummary/langfair.metrics.stereotype.stereotype.StereotypeMetrics.html#langfair.metrics.stereotype.stereotype.StereotypeMetrics">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.stereotype.StereotypeMetrics.html#llambda.metrics.stereotype.stereotype.StereotypeMetrics">(class in llambda.metrics.stereotype.stereotype)</a>, <a href="_autosummary/llambda.metrics.stereotype.stereotype.StereotypeMetrics.html#llambda.metrics.stereotype.stereotype.StereotypeMetrics">[1]</a>
 </li>
-      </ul></li>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.stereotype.metrics.associations.StereotypicalAssociations.html#langfair.metrics.stereotype.metrics.associations.StereotypicalAssociations">StereotypicalAssociations (class in langfair.metrics.stereotype.metrics.associations)</a>, <a href="_autosummary/langfair.metrics.stereotype.metrics.associations.StereotypicalAssociations.html#langfair.metrics.stereotype.metrics.associations.StereotypicalAssociations">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations.html#llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations">(class in llambda.metrics.stereotype.metrics.associations)</a>, <a href="_autosummary/llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations.html#llambda.metrics.stereotype.metrics.associations.StereotypicalAssociations">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -1721,11 +1038,7 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href=".ipynb_checkpoints/_autosummary/langfair.metrics.toxicity.toxicity.ToxicityMetrics.html#langfair.metrics.toxicity.toxicity.ToxicityMetrics">ToxicityMetrics (class in langfair.metrics.toxicity.toxicity)</a>, <a href="_autosummary/langfair.metrics.toxicity.toxicity.ToxicityMetrics.html#langfair.metrics.toxicity.toxicity.ToxicityMetrics">[1]</a>
-
-      <ul>
-        <li><a href=".ipynb_checkpoints/_autosummary/llambda.metrics.toxicity.toxicity.ToxicityMetrics.html#llambda.metrics.toxicity.toxicity.ToxicityMetrics">(class in llambda.metrics.toxicity.toxicity)</a>, <a href="_autosummary/llambda.metrics.toxicity.toxicity.ToxicityMetrics.html#llambda.metrics.toxicity.toxicity.ToxicityMetrics">[1]</a>
 </li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -1758,8 +1071,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1792,7 +1105,7 @@ document.write(`
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>
