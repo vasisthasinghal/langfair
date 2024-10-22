@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "langfair"
-version = "0.1.0"
+version = "1.0.0"
 description = "Bias and Fairness Assessments for Language Models"
 readme = "README.md"
 authors = ["Dylan Bouchard <dylan.bouchard@cvshealth.com>"]
