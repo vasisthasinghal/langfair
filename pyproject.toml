@@ -5,7 +5,7 @@ description = """
 LangFair is a library for bias and fairness assessments for large language model use cases.
 - Core functionality under the Apache 2.0 License.
 - Additional components under the MIT License.
-For more details, see the [LICENSE](https://github.com/cvs-health/langfair/blob/develop/LICENSE) file.
+For more details, see the License file: https://github.com/cvs-health/langfair/blob/develop/LICENSE
 """
 readme = "README.md"
 authors = ["Dylan Bouchard <dylan.bouchard@cvshealth.com>"]
