@@ -1,4 +1,4 @@
-LLaMBDA is available under the Apache License, Version 2.0 unless otherwise noted below in the “MIT License Components” Section.
+LangFair is available under the Apache License, Version 2.0 unless otherwise noted below in the “MIT License Components” Section.
 
                                  Apache License
                            Version 2.0, January 2004
@@ -180,7 +180,7 @@ LLaMBDA is available under the Apache License, Version 2.0 unless otherwise note
 
 MIT License Components
 
-Portions of LLaMBDA are licensed under the MIT License.  This includes the following files: llambda/generator/generator.py, llambda/generator/counterfactual.py, data/neil_code_dialogsum_train.txt
+Portions of LangFair are licensed under the MIT License.  This includes the following files: langfair/generator/generator.py, langfair/generator/counterfactual.py, data/neil_code_dialogsum_train.txt
 
 MIT License
 
