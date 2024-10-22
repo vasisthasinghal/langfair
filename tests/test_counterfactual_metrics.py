@@ -56,5 +56,5 @@ def test_CounterfactualMetrics():
     ans = actual_results["test6"]
     assert all([
         abs(score[key]-ans[key])<1e-5 for key in ans
-        if key != 'Consine Similarity'
+        if key != 'Cosine Similarity'
     ])
