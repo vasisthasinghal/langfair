@@ -38,15 +38,15 @@ class RougelSimilarity(Metric):
         assert how in [
             "mean",
             "pairwise",
-        ], "LLaMBDA: Only 'mean' and 'pairwise' are supported."
+        ], "langfair: Only 'mean' and 'pairwise' are supported."
         assert how in [
             "mean",
             "pairwise",
-        ], "LLaMBDA: Only 'mean' and 'pairwise' are supported."
+        ], "langfair: Only 'mean' and 'pairwise' are supported."
         assert rouge_metric in [
             "rougeL",
             "rougeLsum",
-        ], """LLaMBDA: Only 'rougeL' and 'rougeLsums' are supported."""
+        ], """langfair: Only 'rougeL' and 'rougeLsums' are supported."""
         self.name = "RougeL Similarity"
         self.how = how
         self.rouge_scorer = rouge_scorer.RougeScorer([rouge_metric], use_stemmer=True)

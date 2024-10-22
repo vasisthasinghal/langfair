@@ -1,6 +1,6 @@
-# Contributing to LLaMBDA
+# Contributing to LangFair
 
-Welcome and thank you for considering contributing to LLaMBDA!
+Welcome and thank you for considering contributing to LangFair!
 
 It takes a lot of time and effort to use software much less build upon it, so we deeply appreciate your desire to help make this project thrive.
 
@@ -47,8 +47,8 @@ Please ensure your pull request adheres to the following guidelines:
 
 ## Development Setup
 
-1. Clone the repository: `git clone https://github.aetna.com/analytics-org/llambda`
-2. Navigate to the project directory: `cd llambda`
+1. Clone the repository: `git clone https://github.aetna.com/cvs-health/langfair`
+2. Navigate to the project directory: `cd langfair`
 3. Create and activate a virtual environment (using `venv` or `conda`)
 4. Install dependencies: `poetry install`
 5. Install our pre-commit hooks to ensure code style compliance: `pre-commit install`
@@ -84,4 +84,4 @@ Before contributing to this CVS Health sponsored project, you will need to sign 
 
 ---
 
-Thanks again for using and supporting LLaMBDA!
+Thanks again for using and supporting LangFair!
