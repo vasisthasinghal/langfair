@@ -20,7 +20,7 @@ packages = [
     { include = "langfair/generator" },
 ]
 exclude = ["docs", "docs_src"] # never include documentation in build
-keywords = ["llm", "large language model", "bias", "fairness"]  # Add your keywords here
+keywords = ["LLM", "large language model", "bias", "fairness", "Responsible AI"]  # Add your keywords here
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
