@@ -36,7 +36,7 @@ class CounterfactualMetrics:
         self, metrics: MetricType = DefaultMetricNames, neutralize_tokens: str = True
     ) -> None:
         """
-        This class computes few or all counterfactual metrics supported LLaMBDA.
+        This class computes few or all counterfactual metrics supported LangFair.
 
         Parameters
         ----------
