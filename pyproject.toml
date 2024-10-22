@@ -6,7 +6,7 @@ readme = "README.md"
 authors = ["Dylan Bouchard <dylan.bouchard@cvshealth.com>"]
 repository = "https://github.com/cvs-health/langfair"
 Homepage = "https://github.com/cvs-health/langfair"
-Documentation = "https://cvs-health.github.io/langfair/latest/index.html
+Documentation = "https://cvs-health.github.io/langfair/latest/index.html"
 
 classifiers = [
     "Programming Language :: Python :: 3 :: Only",
