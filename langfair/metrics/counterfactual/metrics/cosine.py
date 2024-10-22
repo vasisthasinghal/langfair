@@ -41,10 +41,10 @@ class CosineSimilarity(Metric):
         assert how in [
             "mean",
             "pairwise",
-        ], "LLaMBDA: Only 'mean' and 'pairwise' are supported."
+        ], "langfair: Only 'mean' and 'pairwise' are supported."
         assert (
             transformer is not None
-        ), "LLaMBDA: A HuggingFace sentence transformer must be specified when initializing the class to compute cosine similarity."
+        ), "langfair: A HuggingFace sentence transformer must be specified when initializing the class to compute cosine similarity."
         self.name = "Cosine Similarity"
         self.how = how
         self.transformer = transformer
@@ -76,7 +76,7 @@ class CosineSimilarity(Metric):
         """
         assert len(texts1) == len(
             texts2
-        ), """LLaMBDA: Lists 'texts1' and 'texts2' must be of equal length."""
+        ), """langfair: Lists 'texts1' and 'texts2' must be of equal length."""
 
         embeddings1, embeddings2 = self._get_embeddings(
             transformer=self.transformer_instance, texts1=texts1, texts2=texts2
