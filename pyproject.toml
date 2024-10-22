@@ -5,6 +5,9 @@ description = "Bias and Fairness Assessments for Language Models"
 readme = "README.md"
 authors = ["Dylan Bouchard <dylan.bouchard@cvshealth.com>"]
 repository = "https://github.com/cvs-health/langfair"
+Homepage = "https://github.com/cvs-health/langfair"
+Documentation = "https://cvs-health.github.io/langfair/latest/index.html"
+
 classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Operating System :: OS Independent",
@@ -17,7 +20,7 @@ packages = [
     { include = "langfair/generator" },
 ]
 exclude = ["docs", "docs_src"] # never include documentation in build
-keywords = ["llm", "large language model", "bias", "fairness"]  # Add your keywords here
+keywords = ["LLM", "large language model", "bias", "fairness", "Responsible AI"]  # Add your keywords here
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
