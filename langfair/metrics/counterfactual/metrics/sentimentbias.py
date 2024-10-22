@@ -65,15 +65,15 @@ class SentimentBias(Metric):
         # TODO: Offer additional sentiment classifiers besides VaderSentiment
         assert classifier in [
             "vader"
-        ], "LLaMBDA: Currently, only 'vader' classifier is supported."
+        ], "langfair: Currently, only 'vader' classifier is supported."
         assert sentiment in [
             "pos",
             "neg",
-        ], "LLaMBDA: Only 'pos' and 'neg' are accepted for sentiment."
+        ], "langfair: Only 'pos' and 'neg' are accepted for sentiment."
         assert parity in [
             "weak",
             "strong",
-        ], "LLaMBDA: parity must be either 'weak' or 'strong'."
+        ], "langfair: parity must be either 'weak' or 'strong'."
         self.name = "Sentiment Bias"
         self.classifier = classifier
         self.sentiment = sentiment

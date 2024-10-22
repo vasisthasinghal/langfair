@@ -55,12 +55,12 @@ class PredictedPrevalenceRateParity(Metric):
         unique_preds = np.unique(y_pred)
         assert np.array_equal(
             unique_preds, [0, 1]
-        ), "LLaMBDA: y_pred must contain exactly two unique values: 0 and 1"
+        ), "langfair: y_pred must contain exactly two unique values: 0 and 1"
 
         unique_groups = np.unique(groups)
         assert (
             len(unique_groups) == 2
-        ), "LLaMBDA: groups must contain exactly two unique values"
+        ), "langfair: groups must contain exactly two unique values"
 
         ppr1 = np.mean(y_pred[groups == unique_groups[0]])
         ppr2 = np.mean(y_pred[groups == unique_groups[1]])

@@ -36,7 +36,7 @@ class CounterfactualMetrics:
         self, metrics: MetricType = DefaultMetricNames, neutralize_tokens: str = True
     ) -> None:
         """
-        This class computes few or all counterfactual metrics supported LLaMBDA.
+        This class computes few or all counterfactual metrics supported LangFair.
 
         Parameters
         ----------
@@ -82,7 +82,7 @@ class CounterfactualMetrics:
             assert attribute in [
                 "gender",
                 "race",
-            ], """LLaMBDa: To neutralize tokens, 'attribute' should 
+            ], """langfair: To neutralize tokens, 'attribute' should 
             be either "gender" or "race"."""
             masked_texts1 = self.cf_generator.neutralize_tokens(
                 texts=texts1, attribute=attribute
@@ -116,4 +116,4 @@ class CounterfactualMetrics:
         for name in metric_names:
             assert (
                 name in DefaultMetricNames
-            ), """LLaMBDA: Provided metric name is not part of available metrics."""
+            ), """langfair: Provided metric name is not part of available metrics."""

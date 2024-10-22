@@ -16,7 +16,7 @@
 #
 # The original work of Stanford University has been modified by CVS Health
 # to remove demographic representations metric and refactor for compatibility
-# with LLaMBDA.
+# with LangFair.
 
 import itertools
 from collections import defaultdict
@@ -75,7 +75,7 @@ class StereotypicalAssociations:
         self.target_category: Optional[str] = target_category
 
         assert self.target_category in ["adjective", "profession"], """
-            LLaMBDA: only "adjective" and "profession" are supported for `target_category` 
+            langfair: only "adjective" and "profession" are supported for `target_category` 
         """
 
         # Dictionary of demographic word lists. Uses pre-defined lists of gender words by default
@@ -87,7 +87,7 @@ class StereotypicalAssociations:
                 assert isinstance(val, list) and all(
                     isinstance(elem, str) for elem in val
                 ), """
-                    LLaMBDA: values in `demographic_group_word_lists` must be lists of strings
+                    langfair: values in `demographic_group_word_lists` must be lists of strings
                 """
             self.demographic_group_to_words: Dict[str, List[str]] = (
                 demographic_group_word_lists

@@ -37,7 +37,7 @@ class BleuSimilarity(Metric):
         assert how in [
             "mean",
             "pairwise",
-        ], "LLaMBDA: Only 'mean' and 'pairwise' are supported."
+        ], "langfair: Only 'mean' and 'pairwise' are supported."
         self.name = "Bleu Similarity"
         self.how = how
 

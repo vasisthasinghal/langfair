@@ -34,7 +34,7 @@ DefaultMetricNames = list(DefaultMetricObjects.keys())
 class StereotypeMetrics:
     def __init__(self, metrics: MetricType = DefaultMetricNames) -> None:
         """
-        This class computes few or all Stereotype metrics supported LLaMBDA.
+        This class computes few or all Stereotype metrics supported langfair.
 
         Parameters
         ----------
@@ -110,4 +110,4 @@ class StereotypeMetrics:
         for name in metric_names:
             assert (
                 name in DefaultMetricNames
-            ), """LLaMBDA: Provided metric name is not part of available metrics."""
+            ), """langfair: Provided metric name is not part of available metrics."""
