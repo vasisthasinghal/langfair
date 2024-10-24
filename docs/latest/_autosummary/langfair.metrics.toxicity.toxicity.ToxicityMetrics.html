@@ -513,15 +513,12 @@ Otherwise, metrics are applied as a single calculation over all responses (only 
 <li><p><strong>return_data</strong> (<em>bool</em><em>, </em><em>default=False</em>) – Indicates whether to include response-level toxicity scores in results dictionary returned by this method.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</span></p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary containing evaluated metric values and data used to compute metrics, including toxicity scores, corresponding
+responses, and prompts (if applicable).</p>
 </dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><em>Dictionary containing evaluated metric values and data used to compute metrics, including toxicity scores, corresponding</em></p></li>
-<li><p><em>responses, and prompts (if applicable).</em></p></li>
-</ul>
-</p>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -535,8 +532,11 @@ Otherwise, metrics are applied as a single calculation over all responses (only 
 <dd class="field-odd"><p><strong>responses</strong> (<em>list</em><em> of </em><em>strings</em>) – A list of generated outputs from a language model on which toxicity
 metrics will be calculated.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of toxicity scores corresponding to provided responses</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of float</p>
 </dd>
 </dl>
 </dd></dl>

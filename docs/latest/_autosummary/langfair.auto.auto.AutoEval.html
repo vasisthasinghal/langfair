@@ -453,29 +453,23 @@
 <dt class="sig sig-object py" id="langfair.auto.auto.AutoEval.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">responses</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">langchain_llm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_calls_per_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toxicity_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neutralize_tokens</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langfair.auto.auto.AutoEval.__init__" title="Link to this definition">#</a></dt>
 <dd><p>This class calculates all toxicity, stereotype, and counterfactual metrics support by langfair</p>
-<section id="parameters">
-<h2>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h2>
-<dl class="simple">
-<dt>prompts<span class="classifier">list of strings or DataFrame of strings</span></dt><dd><p>A list of input prompts for the model.</p>
-</dd>
-<dt>responses<span class="classifier">list of strings or DataFrame of strings, default is None</span></dt><dd><p>A list of generated output from an LLM. If not available, responses are generated using the model.</p>
-</dd>
-<dt>langchain_llm<span class="classifier">langchain llm object, default=None</span></dt><dd><p>A langchain llm object to get passed to chain constructor. User is responsible for specifying
-temperature and other relevant parameters to the constructor of their <cite>langchain_llm</cite> object.</p>
-</dd>
-<dt>max_calls_per_min<span class="classifier">int, default=None</span></dt><dd><p>Specifies how many api calls to make per minute to avoid a rate limit error. By default, no
-limit is specified.</p>
-</dd>
-<dt>metrics<span class="classifier">dict or list of str, default option compute all supported metrics.</span></dt><dd><p>Specifies which metrics to evaluate.</p>
-</dd>
-<dt>toxicity_device: str or torch.device input or torch.device object, default=”cpu”</dt><dd><p>Specifies the device that toxicity classifiers use for prediction. Set to “cuda” for classifiers to be able
-to leverage the GPU. Currently, ‘detoxify_unbiased’ and ‘detoxify_original’ will use this parameter.</p>
-</dd>
-<dt>neutralize_tokens: boolean, default=True</dt><dd><p>An indicator attribute to use masking for the computation of Blue and RougeL metrics. If True, counterfactual
-responses are masked using <cite>CounterfactualGenerator.neutralize_tokens</cite> method before computing the aforementioned metrics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompts</strong> (<em>list</em><em> of </em><em>strings</em><em> or </em><em>DataFrame</em><em> of </em><em>strings</em>) – A list of input prompts for the model.</p></li>
+<li><p><strong>responses</strong> (<em>list</em><em> of </em><em>strings</em><em> or </em><em>DataFrame</em><em> of </em><em>strings</em><em>, </em><em>default is None</em>) – A list of generated output from an LLM. If not available, responses are generated using the model.</p></li>
+<li><p><strong>langchain_llm</strong> (<em>langchain llm object</em><em>, </em><em>default=None</em>) – A langchain llm object to get passed to chain constructor. User is responsible for specifying
+temperature and other relevant parameters to the constructor of their <cite>langchain_llm</cite> object.</p></li>
+<li><p><strong>max_calls_per_min</strong> (<em>int</em><em>, </em><em>default=None</em>) – Specifies how many api calls to make per minute to avoid a rate limit error. By default, no
+limit is specified.</p></li>
+<li><p><strong>metrics</strong> (<em>dict</em><em> or </em><em>list</em><em> of </em><em>str</em><em>, </em><em>default option compute all supported metrics.</em>) – Specifies which metrics to evaluate.</p></li>
+<li><p><strong>toxicity_device</strong> (<em>str</em><em> or </em><em>torch.device input</em><em> or </em><em>torch.device object</em><em>, </em><em>default=&quot;cpu&quot;</em>) – Specifies the device that toxicity classifiers use for prediction. Set to “cuda” for classifiers to be able
+to leverage the GPU. Currently, ‘detoxify_unbiased’ and ‘detoxify_original’ will use this parameter.</p></li>
+<li><p><strong>neutralize_tokens</strong> (<em>boolean</em><em>, </em><em>default=True</em>) – An indicator attribute to use masking for the computation of Blue and RougeL metrics. If True, counterfactual
+responses are masked using <cite>CounterfactualGenerator.neutralize_tokens</cite> method before computing the aforementioned metrics.</p></li>
+</ul>
 </dd>
 </dl>
-</section>
 </dd></dl>
 
 <p class="rubric">Methods</p>
@@ -501,22 +495,16 @@ responses are masked using <cite>CounterfactualGenerator.neutralize_tokens</cite
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langfair.auto.auto.AutoEval.evaluate" title="Link to this definition">#</a></dt>
 <dd><p>Compute all the metrics based on the provided data.</p>
 <dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>metrics</strong> (<em>dict</em><em> or </em><em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – Specifies which metrics to evaluate. If None, computes all supported metrics.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing values of toxicity, stereotype, and counterfactual metrics.</p>
+</dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]</span></p>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
-<section id="id1">
-<h2>Parameters:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<dl class="simple">
-<dt>metrics<span class="classifier">dict or list of str, default option compute all supported metrics.</span></dt><dd><p>Specifies which metrics to evaluate.</p>
-</dd>
-</dl>
-</section>
-<section id="returns">
-<h2>Returns:<a class="headerlink" href="#returns" title="Link to this heading">#</a></h2>
-<p>:
-Dictionary containing values of toxicity, stereotype, and counterfactual metrics</p>
-</section>
 </dd></dl>
 
 <dl class="py method">
@@ -524,17 +512,13 @@ Dictionary containing values of toxicity, stereotype, and counterfactual metrics
 <span class="sig-name descname"><span class="pre">export_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'results.txt'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langfair.auto.auto.AutoEval.export_results" title="Link to this definition">#</a></dt>
 <dd><p>Export the evaluated metrics values in a text file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>str</em><em>, </em><em>Default = &quot;results.txt&quot;</em>) – Name of the .txt file.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
 </dd>
 </dl>
-<section id="id2">
-<h2>Parameters:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<dl class="simple">
-<dt>file_name<span class="classifier">str, Default = “results.txt”</span></dt><dd><p>Name of the .txt file.</p>
-</dd>
-</dl>
-</section>
 </dd></dl>
 
 <dl class="py method">

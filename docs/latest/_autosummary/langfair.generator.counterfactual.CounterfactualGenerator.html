@@ -505,8 +505,11 @@ should correspond to groups. Must be provided if attribute is None. For example:
 {‘male’: [‘he’, ‘him’, ‘woman’], ‘female’: [‘she’, ‘her’, ‘man’]}</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Dictionary containing counterfactual prompts</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -528,12 +531,12 @@ Note: This method is only compatible with GPT models.</p>
 <li><p><strong>count</strong> (<em>int</em><em>, </em><em>default=25</em>) – The number of generations per prompt used when estimating cost.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</span></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A dictionary containing the estimated token costs, including prompt token cost, completion token cost,
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing the estimated token costs, including prompt token cost, completion token cost,
 and total token cost.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -597,8 +600,11 @@ gender-neutral equivalent and race words with “[MASK]”.</p>
 <li><p><strong>attribute</strong> (<em>{'gender'</em><em>, </em><em>'race'}</em><em>, </em><em>default='gender'</em>) – Specifies whether to use race or gender for neutralization</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of texts neutralized for race or gender</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
@@ -613,16 +619,15 @@ gender-neutral equivalent and race words with “[MASK]”.</p>
 <li><p><strong>texts</strong> (<em>list</em><em> of </em><em>strings</em>) – A list of texts to be parsed for protected attribute words</p></li>
 <li><p><strong>attribute</strong> (<em>{'race'</em><em>,</em><em>'gender'}</em><em>, </em><em>default=None</em>) – Specifies what to parse for among race words and gender words. Must be specified
 if custom_list is None</p></li>
-<li><p><strong>custom_list</strong> (<em>List</em><em>[</em><em>str</em><em>]</em><em>, </em><em>default=None</em>) – <p>Custom list of tokens to use for parsing prompts. Must be provided if attribute is None.</p>
-<p>Returns</p>
-</p></li>
-<li><p><strong>----------</strong></p></li>
-<li><p><strong>protected</strong> (<em>List</em><em> of </em><em>length len</em><em>(</em><em>texts</em><em>) </em><em>with each element being a list</em><em> of </em><em>identified</em>)</p></li>
-<li><p><strong>text</strong> (<em>attribute words in provided</em>)</p></li>
+<li><p><strong>custom_list</strong> (<em>List</em><em>[</em><em>str</em><em>]</em><em>, </em><em>default=None</em>) – Custom list of tokens to use for parsing prompts. Must be provided if attribute is None.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span></p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of length <cite>len(texts)</cite> with each element being a list of identified protected
+attribute words in provided text</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>
