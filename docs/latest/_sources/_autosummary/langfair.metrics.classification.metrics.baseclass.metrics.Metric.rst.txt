@@ -1,4 +1,4 @@
-langfair.metrics.classification.metrics.baseclass.metrics.Metric
+﻿langfair.metrics.classification.metrics.baseclass.metrics.Metric
 ================================================================
 
 .. currentmodule:: langfair.metrics.classification.metrics.baseclass.metrics
@@ -17,6 +17,7 @@ langfair.metrics.classification.metrics.baseclass.metrics.Metric
    .. autosummary::
    
       ~Metric.__init__
+      ~Metric.binary_confusion_matrix
       ~Metric.evaluate
    
    

@@ -1,4 +1,4 @@
-langfair.metrics.classification.metrics.false\_omission.FalseOmissionRateParity
+﻿langfair.metrics.classification.metrics.false\_omission.FalseOmissionRateParity
 ===============================================================================
 
 .. currentmodule:: langfair.metrics.classification.metrics.false_omission
@@ -17,6 +17,7 @@ langfair.metrics.classification.metrics.false\_omission.FalseOmissionRateParity
    .. autosummary::
    
       ~FalseOmissionRateParity.__init__
+      ~FalseOmissionRateParity.binary_confusion_matrix
       ~FalseOmissionRateParity.evaluate
    
    

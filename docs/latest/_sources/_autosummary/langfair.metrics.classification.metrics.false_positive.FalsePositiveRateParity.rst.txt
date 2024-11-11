@@ -1,4 +1,4 @@
-langfair.metrics.classification.metrics.false\_positive.FalsePositiveRateParity
+﻿langfair.metrics.classification.metrics.false\_positive.FalsePositiveRateParity
 ===============================================================================
 
 .. currentmodule:: langfair.metrics.classification.metrics.false_positive
@@ -17,6 +17,7 @@ langfair.metrics.classification.metrics.false\_positive.FalsePositiveRateParity
    .. autosummary::
    
       ~FalsePositiveRateParity.__init__
+      ~FalsePositiveRateParity.binary_confusion_matrix
       ~FalsePositiveRateParity.evaluate
    
    

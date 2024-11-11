@@ -49,7 +49,7 @@
     <link rel="prev" title="langfair.generator.generator" href="langfair.generator.generator.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.1.0" />
+  <meta name="docsearch:version" content="0.1.2" />
   </head>
   
   
@@ -447,11 +447,11 @@
 <h1>langfair.generator.generator.ResponseGenerator<a class="headerlink" href="#langfair-generator-generator-responsegenerator" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="langfair.generator.generator.ResponseGenerator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langfair.generator.generator.</span></span><span class="sig-name descname"><span class="pre">ResponseGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">langchain_llm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_calls_per_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langfair.generator.generator.ResponseGenerator" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langfair.generator.generator.</span></span><span class="sig-name descname"><span class="pre">ResponseGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">langchain_llm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_calls_per_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppressed_exceptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langfair.generator.generator.ResponseGenerator" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="langfair.generator.generator.ResponseGenerator.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">langchain_llm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_calls_per_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langfair.generator.generator.ResponseGenerator.__init__" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">langchain_llm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_calls_per_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppressed_exceptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langfair.generator.generator.ResponseGenerator.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Class for generating data from a provided set of prompts</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -460,6 +460,8 @@
 temperature and other relevant parameters to the constructor of their <cite>langchain_llm</cite> object.</p></li>
 <li><p><strong>max_calls_per_min</strong> (<em>int</em><em>, </em><em>default=None</em>) – Specifies how many api calls to make per minute to avoid a rate limit error. By default, no
 limit is specified.</p></li>
+<li><p><strong>suppressed_exceptions</strong> (<em>tuple</em><em>, </em><em>default=None</em>) – Specifies which exceptions to handle as ‘Unable to get response’ rather than raising the
+exception</p></li>
 </ul>
 </dd>
 </dl>
@@ -480,7 +482,7 @@ dictionaries specifying the input and output costs per token.</p>
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#langfair.generator.generator.ResponseGenerator.__init__" title="langfair.generator.generator.ResponseGenerator.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([langchain_llm, max_calls_per_min])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#langfair.generator.generator.ResponseGenerator.__init__" title="langfair.generator.generator.ResponseGenerator.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([langchain_llm, max_calls_per_min, ...])</p></td>
 <td><p>Class for generating data from a provided set of prompts</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#langfair.generator.generator.ResponseGenerator.estimate_token_cost" title="langfair.generator.generator.ResponseGenerator.estimate_token_cost"><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimate_token_cost</span></code></a>(tiktoken_model_name, prompts)</p></td>
@@ -497,7 +499,7 @@ dictionaries specifying the input and output costs per token.</p>
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">estimate_token_cost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tiktoken_model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">example_responses</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_sample_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'You</span> <span class="pre">are</span> <span class="pre">a</span> <span class="pre">helpful</span> <span class="pre">assistant'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langfair.generator.generator.ResponseGenerator.estimate_token_cost" title="Link to this definition">#</a></dt>
 <dd><p>Estimates the token cost for a given list of prompts and (optionally) example responses.
 Note: This method is only compatible with GPT models. Cost-per-token values are as of
-08/07/2024.</p>
+10/21/2024.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">

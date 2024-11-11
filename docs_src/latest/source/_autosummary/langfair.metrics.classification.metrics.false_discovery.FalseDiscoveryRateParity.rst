@@ -1,4 +1,4 @@
-langfair.metrics.classification.metrics.false\_discovery.FalseDiscoveryRateParity
+﻿langfair.metrics.classification.metrics.false\_discovery.FalseDiscoveryRateParity
 =================================================================================
 
 .. currentmodule:: langfair.metrics.classification.metrics.false_discovery
@@ -17,6 +17,7 @@ langfair.metrics.classification.metrics.false\_discovery.FalseDiscoveryRateParit
    .. autosummary::
    
       ~FalseDiscoveryRateParity.__init__
+      ~FalseDiscoveryRateParity.binary_confusion_matrix
       ~FalseDiscoveryRateParity.evaluate
    
    
