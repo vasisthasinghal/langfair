@@ -44,9 +44,7 @@ MetricTypeToDict = {
 class ClassificationMetrics:
     def __init__(self, metric_type: str = "all") -> None:
         """
-        Class for pairwise classification fairness metrics. For more information on these metrics,
-        see Feldman et al. (2015) :footcite:`feldman2015certifyingremovingdisparateimpact`,
-        Bellamy et al. (2018) :footcite:`bellamy2018aifairness360extensible` and Saleiro et al. (2019) :footcite:`saleiro2019aequitasbiasfairnessaudit`.
+        Class for pairwise classification fairness metrics.
 
         Parameters
         ----------
@@ -87,10 +85,6 @@ class ClassificationMetrics:
         -------
         dict
             Dictionary containing specified metric values
-
-        References
-        ----------
-        .. footbibliography::
         """
         return {
             metric.name: metric.evaluate(
