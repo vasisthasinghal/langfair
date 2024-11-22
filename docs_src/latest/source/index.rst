@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to LangFair's documentation!
-===================================
+====================================
 
 .. toctree::
    :maxdepth: 1
@@ -12,6 +12,8 @@ Welcome to LangFair's documentation!
 
    usage
    API <api>
+   Example Notebook <ex-nbs>
+   FAQ <faq>
 
 
 Check out the :doc:`usage` section for further information, including how to :ref:`install <installation>` the project.
