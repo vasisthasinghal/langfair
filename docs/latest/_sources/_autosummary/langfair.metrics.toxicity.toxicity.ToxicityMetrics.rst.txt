@@ -1,4 +1,4 @@
-langfair.metrics.toxicity.toxicity.ToxicityMetrics
+﻿langfair.metrics.toxicity.toxicity.ToxicityMetrics
 ==================================================
 
 .. currentmodule:: langfair.metrics.toxicity.toxicity

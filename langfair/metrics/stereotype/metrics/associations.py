@@ -52,7 +52,7 @@ class StereotypicalAssociations:
         https://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/bias_metrics.py
 
         For more more information on this metric, refer to Liang et al. (2023):
-        https://arxiv.org/abs/2211.09110
+        :footcite:`liang2023holisticevaluationlanguagemodels`
 
         Parameters
         ----------
@@ -139,6 +139,10 @@ class StereotypicalAssociations:
         -------
         float
             Stereotypical associations score
+
+        References
+        ----------
+        .. footbibliography::
         """
         # Count the number of times each target_word and group co-occur
         pair_to_count: Dict[Tuple[str, str], int] = defaultdict(int)
