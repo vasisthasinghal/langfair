@@ -10,7 +10,7 @@ Welcome to LangFair's documentation!
    :maxdepth: 1
    :caption: Contents:
 
-   Get Started <usage>
+   usage
    API <api>
 
 
