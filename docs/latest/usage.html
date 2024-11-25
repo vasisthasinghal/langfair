@@ -144,20 +144,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="ex-nbs.html">
-    Example Notebook
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="faq.html">
-    FAQ
-  </a>
-</li>
-
   </ul>
 </nav></div>
       
@@ -257,20 +243,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="api.html">
     API
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="ex-nbs.html">
-    Example Notebook
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="faq.html">
-    FAQ
   </a>
 </li>
 
@@ -380,7 +352,11 @@
 </section>
 <section id="usage-example">
 <h2>Usage Example<a class="headerlink" href="#usage-example" title="Link to this heading">#</a></h2>
-<p>Below is a sample of code illustrating how to use LangFair’s <cite>AutoEval</cite> class for text generation and summarization use cases. The below example assumes the user has already defined parameters <cite>DEPLOYMENT_NAME</cite>, <cite>API_KEY</cite>, <cite>API_BASE</cite>, <cite>API_TYPE</cite>, <cite>API_VERSION</cite>, and a list of prompts from their use case <cite>prompts</cite>.</p>
+<p>Below is a sample of code illustrating how to use LangFair’s <cite>AutoEval</cite> class for text generation and summarization use cases. The below example assumes the user has already defined parameters
+<code class="docutils literal notranslate"><span class="pre">DEPLOYMENT_NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">API_KEY</span></code>, <code class="docutils literal notranslate"><span class="pre">API_BASE</span></code>, <code class="docutils literal notranslate"><span class="pre">API_TYPE</span></code>, <code class="docutils literal notranslate"><span class="pre">API_VERSION</span></code>, and a list of prompts from their use case <cite>prompts</cite>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>Create <cite>langchain</cite> LLM object.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">langchain_openai</span> <span class="kn">import</span> <span class="n">AzureChatOpenAI</span>
 <span class="c1"># import torch # uncomment if GPU is available</span>
@@ -396,7 +372,31 @@
 <span class="p">)</span>
 </pre></div>
 </div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>Run the <cite>AutoEval</cite> method for automated bias / fairness evaluation</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">langfair.auto</span> <span class="kn">import</span> <span class="n">AutoEval</span>
+<span class="n">auto_object</span> <span class="o">=</span> <span class="n">AutoEval</span><span class="p">(</span>
+   <span class="n">prompts</span><span class="o">=</span><span class="n">prompts</span><span class="p">,</span>
+   <span class="n">langchain_llm</span><span class="o">=</span><span class="n">llm</span>
+   <span class="c1"># toxicity_device=device # uncomment if GPU is available</span>
+<span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">auto_object</span><span class="o">.</span><span class="n">evaluate</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/autoeval_process.png"><img alt="AutoEval Process" src="_images/autoeval_process.png" style="width: 800px;" />
+</a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Print the results and export to .txt file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">auto_object</span><span class="o">.</span><span class="n">export_results</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s2">&quot;metric_values.txt&quot;</span><span class="p">)</span>
+<span class="n">auto_object</span><span class="o">.</span><span class="n">print_results</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/autoeval_output.png"><img alt="AutoEval Output" class="align-center" src="_images/autoeval_output.png" style="width: 500px;" />
+</a>
 </section>
 </section>
 

@@ -12,8 +12,6 @@ Welcome to LangFair's documentation!
 
    Get Started <usage>
    API <api>
-   Example Notebook <ex-nbs>
-   FAQ <faq>
 
 
 Check out the :doc:`usage` section for further information, including how to :ref:`install <installation>` the project.
