@@ -133,7 +133,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../usage.html">
-    Usage
+    Get Started
   </a>
 </li>
 
@@ -235,7 +235,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../usage.html">
-    Usage
+    Get Started
   </a>
 </li>
 
@@ -460,15 +460,12 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'adjective'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">demographic_group_word_lists</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stereotype_word_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">how</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langfair.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Class for computing Co-occurrence bias score. Compute co-occurrence bias scores as defined by conditional probability ratios
 based on infinite context windows. Code is based on research by Bordia &amp; Bowman (2019):
-<a class="reference external" href="https://arxiv.org/abs/1904.03035">https://arxiv.org/abs/1904.03035</a>
-:type target_category: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>
-:param target_category: The target category used to measure the COBS score with the COBS score with default</p>
-<blockquote>
-<div><p>target word list. Not used if <cite>stereotype_word_list</cite> is provided.</p>
-</div></blockquote>
+<a class="reference external" href="https://arxiv.org/abs/1904.03035">https://arxiv.org/abs/1904.03035</a>. For more information on these metrics, see Bordia et al. (2019) <a class="footnote-reference brackets" href="#footcite-bordia2019identifyingreducinggenderbias" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>target_category</strong> (<em>{'adjective'</em><em>, </em><em>'profession'}</em><em>, </em><em>default = 'adjective'</em>) – The target category used to measure the COBS score with the COBS score with default
+target word list. Not used if <cite>stereotype_word_list</cite> is provided.</p></li>
 <li><p><strong>demographic_group_word_lists</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><em>default = None</em>) – A dictionary with values that are demographic word lists. Must have exactly two keys.
 Each value must be a list of strings. If None, default gender word lists are used.</p></li>
 <li><p><strong>stereotype_word_list</strong> (<em>List</em><em>[</em><em>str</em><em>]</em><em>, </em><em>default = None</em>) – A list of target (stereotype) words for computing COBS score. If None, a default
@@ -487,7 +484,7 @@ method returns dictinary with COBS(w) for each word ‘w’.</p></li>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#langfair.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.__init__" title="langfair.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([target_category, ...])</p></td>
-<td><p>Class for computing Co-occurrence bias score. Compute co-occurrence bias scores as defined by conditional probability ratios based on infinite context windows. Code is based on research by Bordia &amp; Bowman (2019): <a class="reference external" href="https://arxiv.org/abs/1904.03035">https://arxiv.org/abs/1904.03035</a> :type target_category: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span> :param target_category: The target category used to measure the COBS score with the COBS score with default                         target word list. Not used if <cite>stereotype_word_list</cite> is provided. :type target_category: {'adjective', 'profession'}, default = 'adjective' :type demographic_group_word_lists: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]</span> :param demographic_group_word_lists: A dictionary with values that are demographic word lists. Must have exactly two keys. Each value must be a list of strings. If None, default gender word lists are used. :type demographic_group_word_lists: Dict[str, List[str]], default = None :type stereotype_word_list: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span> :param stereotype_word_list: A list of target (stereotype) words for computing COBS score. If None, a default                              word list is used based on selected <cite>target_category</cite>. If specified, this                              parameter takes precedence over <cite>target_category</cite>. :type stereotype_word_list: List[str], default = None :type beta: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span> :param beta: Specifies the weighting factor for infinite context window used when calculating              co-occurrence bias score. :type beta: float, default=0.95 :type how: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span> :param how: If defined as 'mean', evaluate method returns average COBS score. If 'word_level', the             method returns dictinary with COBS(w) for each word 'w'. :type how: str, default='mean'.</p></td>
+<td><p>Class for computing Co-occurrence bias score.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#langfair.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.evaluate" title="langfair.metrics.stereotype.metrics.cooccurrence.CooccurrenceBiasMetric.evaluate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evaluate</span></code></a>(responses)</p></td>
 <td><p>Compute the relative co-occurrence rates of target words with protected attribute words.</p></td>
@@ -512,6 +509,15 @@ metric will be calculated.</p>
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
+<p class="rubric">References</p>
+<div class="docutils container" id="id2">
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="footcite-bordia2019identifyingreducinggenderbias" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Shikha Bordia and Samuel R. Bowman. Identifying and reducing gender bias in word-level language models. 2019. URL: <a class="reference external" href="https://arxiv.org/abs/1904.03035">https://arxiv.org/abs/1904.03035</a>, <a class="reference external" href="https://arxiv.org/abs/1904.03035">arXiv:1904.03035</a>.</p>
+</aside>
+</aside>
+</div>
 </dd></dl>
 
 </dd></dl>

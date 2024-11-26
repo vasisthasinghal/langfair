@@ -133,7 +133,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../usage.html">
-    Usage
+    Get Started
   </a>
 </li>
 
@@ -235,7 +235,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../usage.html">
-    Usage
+    Get Started
   </a>
 </li>
 
@@ -460,8 +460,9 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">classifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'vader'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sentiment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'neg'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'strong'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">how</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_classifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langfair.metrics.counterfactual.metrics.sentimentbias.SentimentBias.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Compute a counterfactual sentiment bias score leveraging a third-party sentiment classifier.
 Code adapted from helm package:
-<a class="github reference external" href="https://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/basic_metrics.py">stanford-crfm/helm</a>
-For more information on this bias metric, refer to: <a class="reference external" href="https://arxiv.org/pdf/1911.03064.pdf">https://arxiv.org/pdf/1911.03064.pdf</a></p>
+<a class="github reference external" href="https://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/basic_metrics.py">stanford-crfm/helm</a>.
+For more information on these metrics, see Huang et al. (2020) <a class="footnote-reference brackets" href="#footcite-huang2020reducingsentimentbiaslanguage" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>
+and Bouchard et al. (2024) <a class="footnote-reference brackets" href="#footcite-bouchard2024actionableframeworkassessingbias" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -516,6 +517,19 @@ group within the same protected attribute as mentioned in <cite>texts1</cite>.</
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
+<p class="rubric">References</p>
+<div class="docutils container" id="id3">
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="footcite-huang2020reducingsentimentbiaslanguage" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Po-Sen Huang, Huan Zhang, Ray Jiang, Robert Stanforth, Johannes Welbl, Jack Rae, Vishal Maini, Dani Yogatama, and Pushmeet Kohli. Reducing sentiment bias in language models via counterfactual evaluation. 2020. URL: <a class="reference external" href="https://arxiv.org/abs/1911.03064">https://arxiv.org/abs/1911.03064</a>, <a class="reference external" href="https://arxiv.org/abs/1911.03064">arXiv:1911.03064</a>.</p>
+</aside>
+<aside class="footnote brackets" id="footcite-bouchard2024actionableframeworkassessingbias" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Dylan Bouchard. An actionable framework for assessing bias and fairness in large language model use cases. 2024. URL: <a class="reference external" href="https://arxiv.org/abs/2407.10853">https://arxiv.org/abs/2407.10853</a>, <a class="reference external" href="https://arxiv.org/abs/2407.10853">arXiv:2407.10853</a>.</p>
+</aside>
+</aside>
+</div>
 </dd></dl>
 
 </dd></dl>

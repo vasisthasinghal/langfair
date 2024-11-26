@@ -4,13 +4,13 @@
    contain the root `toctree` directive.
 
 Welcome to LangFair's documentation!
-===================================
+====================================
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   usage
+   Get Started <usage>
    API <api>
 
 
