@@ -38,6 +38,12 @@ Create `langchain` LLM object.
       temperature=0.4 # User to set temperature
    )
 
+.. note::
+
+   You can use any of `LangChain's LLM classes <https://js.langchain.com/docs/integrations/chat/>`_ in place of AzureChatOpenAI. 
+   
+   Also, to avoid rate limit errors, use LangChain's `InMemoryRateLimiter <https://api.python.langchain.com/en/latest/rate_limiters/langchain_core.rate_limiters.InMemoryRateLimiter.html#>`_
+
 |
 Run the `AutoEval` method for automated bias / fairness evaluation
 

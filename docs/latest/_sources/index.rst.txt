@@ -10,8 +10,10 @@ Welcome to LangFair's documentation!
    :maxdepth: 1
    :caption: Contents:
 
+   Overview <overview>
    Get Started <usage>
    API <api>
+
 
 
 Check out the :doc:`usage` section for further information, including how to :ref:`install <installation>` the project.

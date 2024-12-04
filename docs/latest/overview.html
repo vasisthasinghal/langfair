@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to LangFair’s documentation! &#8212; LangFair 0.2 documentation</title>
+    <title>Overview &#8212; LangFair 0.2 documentation</title>
   
   
   
@@ -41,11 +41,12 @@
     <script src="_static/documentation_options.js?v=10f1778b"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'overview';</script>
     <link rel="icon" href="_static/langfair-logo-only.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Overview" href="overview.html" />
+    <link rel="next" title="Get Started" href="usage.html" />
+    <link rel="prev" title="Welcome to LangFair’s documentation!" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="0.2.0" />
@@ -103,7 +104,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -130,8 +131,8 @@
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="overview.html">
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
     Overview
   </a>
 </li>
@@ -223,10 +224,8 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -241,8 +240,8 @@
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="overview.html">
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
     Overview
   </a>
 </li>
@@ -299,6 +298,15 @@
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -314,7 +322,31 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none"></div>
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Overview</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
               
               
               
@@ -322,18 +354,69 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="welcome-to-langfair-s-documentation">
-<h1>Welcome to LangFair’s documentation!<a class="headerlink" href="#welcome-to-langfair-s-documentation" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Get Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
-</ul>
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h1>
+<section id="langfair-use-case-level-llm-bias-and-fairness-assessments">
+<h2>LangFair: Use-Case Level LLM Bias and Fairness Assessments<a class="headerlink" href="#langfair-use-case-level-llm-bias-and-fairness-assessments" title="Link to this heading">#</a></h2>
+<p>LangFair is a comprehensive Python library designed for conducting bias and fairness assessments of large language model (LLM) use cases.
+This repository includes a comprehensive framework for <a class="reference external" href="https://github.com/cvs-health/langfair/tree/main#choosing-bias-and-fairness-metrics-for-an-llm-use-case">choosing bias and fairness metrics</a>,
+along with <a class="reference external" href="https://github.com/cvs-health/langfair/tree/main/examples">demo notebooks</a> and a <a class="reference external" href="https://arxiv.org/abs/2407.10853">technical playbook</a> that discusses LLM bias and fairness risks, evaluation metrics, and best practices.</p>
+</section>
+<section id="why-choose-langfair">
+<h2>Why choose LangFair?<a class="headerlink" href="#why-choose-langfair" title="Link to this heading">#</a></h2>
+<p>Static benchmark assessments, which are typically assumed to be sufficiently representative, often fall short in capturing the risks associated with all possible use cases of LLMs. These models are increasingly used in various applications, including recommendation systems, classification, text generation, and summarization. However, evaluating these models without considering use-case-specific prompts can lead to misleading assessments of their performance, especially regarding bias and fairness risks.</p>
+<p>LangFair addresses this gap by adopting a Bring Your Own Prompts (BYOP) approach, allowing users to tailor bias and fairness evaluations to their specific use cases. This ensures that the metrics computed reflect the true performance of the LLMs in real-world scenarios, where prompt-specific risks are critical. Additionally, LangFair’s focus is on output-based metrics that are practical for governance audits and real-world testing, without needing access to internal model states.</p>
+</section>
+<section id="choosing-bias-and-fairness-metrics-for-an-llm-use-case">
+<h2>Choosing Bias and Fairness Metrics for an LLM Use Case<a class="headerlink" href="#choosing-bias-and-fairness-metrics-for-an-llm-use-case" title="Link to this heading">#</a></h2>
+<p>Selecting the appropriate bias and fairness metrics is essential for accurately assessing the performance of large language models (LLMs) in specific use cases. Instead of attempting to compute all possible metrics, practitioners should focus on a relevant subset that aligns with their specific goals and the context of their application.</p>
+<p>Our decision framework for selecting appropriate evaluation metrics is illustrated in the diagram below. For more details, refer to our <a class="reference external" href="https://arxiv.org/abs/2407.10853">technical playbook</a>.</p>
+<a class="reference internal image-reference" href="_images/use_case_framework.PNG"><img alt="Use Case Framework" class="align-center" src="_images/use_case_framework.PNG" style="width: 800px;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Fairness through unawareness means none of the prompts for an LLM
+use case include any mention of protected attribute words.</p>
 </div>
-<p>Check out the <a class="reference internal" href="usage.html"><span class="doc">Get Started</span></a> section for further information, including how to <a class="reference internal" href="usage.html#installation"><span class="std std-ref">install</span></a> the project.</p>
-<p>View <a class="reference external" href="https://arxiv.org/pdf/2407.10853">LangFair white paper</a>.</p>
+</section>
+<section id="supported-bias-and-fairness-metrics">
+<h2>Supported Bias and Fairness Metrics<a class="headerlink" href="#supported-bias-and-fairness-metrics" title="Link to this heading">#</a></h2>
+<p>Bias and fairness metrics offered by LangFair are grouped into several categories. The full suite of metrics is displayed below.</p>
+<p><strong>Toxicity Metrics</strong></p>
+<ul class="simple">
+<li><p>Expected Maximum Toxicity <a class="reference external" href="https://arxiv.org/abs/2009.11462">[Gehman et al., 2020]</a></p></li>
+<li><p>Toxicity Probability <a class="reference external" href="https://arxiv.org/abs/2009.11462">[Gehman et al., 2020]</a></p></li>
+<li><p>Toxic Fraction <a class="reference external" href="https://arxiv.org/abs/2211.09110">[Liang et al., 2023]</a></p></li>
+</ul>
+<p><strong>Counterfactual Fairness Metrics</strong></p>
+<ul class="simple">
+<li><p>Strict Counterfactual Sentiment Parity <a class="reference external" href="https://arxiv.org/abs/1911.03064">[Huang et al., 2020]</a></p></li>
+<li><p>Weak Counterfactual Sentiment Parity <a class="reference external" href="https://arxiv.org/abs/2407.10853">[Bouchard, 2024]</a></p></li>
+<li><p>Counterfactual Cosine Similarity Score <a class="reference external" href="https://arxiv.org/abs/2407.10853">[Bouchard, 2024]</a></p></li>
+<li><p>Counterfactual BLEU <a class="reference external" href="https://arxiv.org/abs/2407.10853">[Bouchard, 2024]</a></p></li>
+<li><p>Counterfactual ROUGE-L <a class="reference external" href="https://arxiv.org/abs/2407.10853">[Bouchard, 2024]</a></p></li>
+</ul>
+<p><strong>Stereotype Metrics</strong></p>
+<ul class="simple">
+<li><p>Stereotypical Associations <a class="reference external" href="https://arxiv.org/abs/2211.09110">[Liang et al., 2023]</a></p></li>
+<li><p>Co-occurrence Bias Score <a class="reference external" href="https://arxiv.org/abs/1904.03035">[Bordia &amp; Bowman, 2019]</a></p></li>
+<li><p>Stereotype classifier metrics <a class="reference external" href="https://arxiv.org/abs/2311.14126">[Zekun et al., 2023]</a>, <a class="reference external" href="https://arxiv.org/abs/2407.10853">[Bouchard, 2024]</a></p></li>
+</ul>
+<p><strong>Recommendation (Counterfactual) Fairness Metrics</strong></p>
+<ul class="simple">
+<li><p>Jaccard Similarity <a class="reference external" href="https://dl.acm.org/doi/10.1145/3604915.3608860">[Zhang et al., 2023]</a></p></li>
+<li><p>Search Result Page Misinformation Score <a class="reference external" href="https://dl.acm.org/doi/10.1145/3604915.3608860">[Zhang et al., 2023]</a></p></li>
+<li><p>Pairwise Ranking Accuracy Gap <a class="reference external" href="https://dl.acm.org/doi/10.1145/3604915.3608860">[Zhang et al., 2023]</a></p></li>
+</ul>
+<p><strong>Classification Fairness Metrics</strong></p>
+<ul class="simple">
+<li><p>Predicted Prevalence Rate Disparity <a class="reference external" href="https://arxiv.org/abs/1412.3756">[Feldman et al., 2015]</a>, <a class="reference external" href="https://arxiv.org/abs/1810.01943">[Bellamy et al., 2018]</a>, <a class="reference external" href="https://arxiv.org/abs/1811.05577">[Saleiro et al., 2019]</a></p></li>
+<li><p>False Negative Rate Disparity <a class="reference external" href="https://arxiv.org/abs/1810.01943">[Bellamy et al., 2018]</a>, <a class="reference external" href="https://arxiv.org/abs/1811.05577">[Saleiro et al., 2019]</a></p></li>
+<li><p>False Omission Rate Disparity <a class="reference external" href="https://arxiv.org/abs/1810.01943">[Bellamy et al., 2018]</a>, <a class="reference external" href="https://arxiv.org/abs/1811.05577">[Saleiro et al., 2019]</a></p></li>
+<li><p>False Positive Rate Disparity <a class="reference external" href="https://arxiv.org/abs/1810.01943">[Bellamy et al., 2018]</a>, <a class="reference external" href="https://arxiv.org/abs/1811.05577">[Saleiro et al., 2019]</a></p></li>
+<li><p>False Discovery Rate Disparity <a class="reference external" href="https://arxiv.org/abs/1810.01943">[Bellamy et al., 2018]</a>, <a class="reference external" href="https://arxiv.org/abs/1811.05577">[Saleiro et al., 2019]</a></p></li>
+</ul>
+</section>
 </section>
 
 
@@ -346,12 +429,21 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to LangFair’s documentation!</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="overview.html"
+       href="usage.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Overview</p>
+        <p class="prev-next-title">Get Started</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -367,9 +459,24 @@
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langfair-use-case-level-llm-bias-and-fairness-assessments">LangFair: Use-Case Level LLM Bias and Fairness Assessments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-choose-langfair">Why choose LangFair?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-bias-and-fairness-metrics-for-an-llm-use-case">Choosing Bias and Fairness Metrics for an LLM Use Case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-bias-and-fairness-metrics">Supported Bias and Fairness Metrics</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="_sources/index.rst.txt">
+    <a href="_sources/overview.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
