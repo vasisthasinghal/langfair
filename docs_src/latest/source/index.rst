@@ -13,6 +13,7 @@ Welcome to LangFair's documentation!
    Overview <overview>
    Get Started <usage>
    API <api>
+   Contributor Guide <guide>
 
 
 
