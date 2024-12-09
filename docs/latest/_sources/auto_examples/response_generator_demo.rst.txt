@@ -247,7 +247,7 @@ Passing too many requests asynchronously will trigger a ``RateLimitError``. For 
 
 .. GENERATED FROM PYTHON SOURCE LINES 190-191
 
-To handle this error, we can use ``max_calls_per_min`` to limit the number of requests per minute.
+To handle this error, we can use LangChain's ``InMemoryRateLimiter`` to limit the number of requests per minute.
 
 .. GENERATED FROM PYTHON SOURCE LINES 191-215
 

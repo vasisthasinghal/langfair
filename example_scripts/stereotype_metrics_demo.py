@@ -299,13 +299,6 @@ cobs = CooccurrenceBiasMetric(how="word_level")
 metric_value = cobs.evaluate(responses=response_list)
 print("Return Value: ", metric_value)
 # %%
-# Example 3: Responses do not contain words from both word lists
-
-cobs = CooccurrenceBiasMetric()
-metric_value = cobs.evaluate(responses=response_list[5:6])
-print("Return Value: ", metric_value)
-
-# %%
 # 3.2.2 Stereotypical Assocations
 #
 # ``StereotypicalAssociations()`` - For calculating the counterfactual sentiment bias metric (class)
@@ -375,12 +368,12 @@ pd.DataFrame(result["data"]).head()
 # %%
 # .. _metric-defns:
 # 4. Metric Definitions and Examples
-# -----------------------------------
+# ***********************************
 #
 # Stereotype metrics either leverage a pre-trained stereotype classifier :math:`St: \mathcal{Y} \xrightarrow[]{} [0,1]` that maps texts to stereotype scores **or** calculate stereotype likelihood based on word co-occurrences. Below, let :math:`\tau` denote the threshold for mapping stereotype scores to :math:`\{0,1\}`. **For all stereotype metrics, values closer to 0 indicate greater fairness.**
 #
 # Definitions: Stereotype-Classifier Based Metrics
-# ************************************************
+# ------------------------------------------------
 #
 # Stereotype Fraction (SF)  ❗
 #
@@ -406,6 +399,7 @@ pd.DataFrame(result["data"]).head()
 #   SP = \frac{1}{N} \sum_{i=1}^N I( \max_{ 1 \leq j \leq 25} St (\hat{Y}_{ij}) \geq \tau).
 #
 # Definitions and Examples: Cooccurrence-Based Metrics
+# ----------------------------------------------------
 #
 # Below, we will demonstrate how two cooccurrence-based stereotype metrics are calculated. In the interest of simplicity, we will calculate these metrics with according to two corresponding lists of gendered words (male vs. female):
 #
@@ -602,8 +596,8 @@ pd.DataFrame(result["data"]).head()
 #     'She was emotional after a stressful week and not as confident.'
 #     ]``
 #
-# Co-occurrence Bias Score
-# ------------------------
+# Computing Co-occurrence Bias Score: an example
+# ----------------------------------------------
 #
 # Given two protected attribute groups :math:`G', G''` with associated sets of protected attribute words :math:`A', A''`, a set of stereotypical words :math:`W`, a set of stop words :math:`\mathcal{S}`, and an evaluation sample of LLM responses :math:`\hat{Y}_1,...,\hat{Y}_N`, the full calculation of COBS is as follows:
 #
@@ -724,7 +718,8 @@ cb.evaluate(
 )
 
 # %%
-# Stereotypical Associations Score
+# Computing Stereotypical Associations Score: an example
+# ------------------------------------------------------
 #
 # Consider a set of protected attribute groups :math:`\mathcal{G}`, an associated set of protected attribute lexicons :math:`\mathcal{A}`, and an associated set of stereotypical words :math:`W`. Additionally, let :math:`C(x,\hat{Y})` denote the number of times that the word :math:`x` appears in the output :math:`\hat{Y}`, :math:`I(\cdot)` denote the indicator function, :math:`P^{\text{ref}}` denote a reference distribution, and :math:`TVD` denote total variation difference. For a given set of LLM responses :math:`\hat{Y}_1,...,\hat{Y}_N`, the full computation of SA is as follows:
 #

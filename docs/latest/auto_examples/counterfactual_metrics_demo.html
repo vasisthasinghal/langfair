@@ -410,10 +410,8 @@ to download the full example code.</p>
 <p class="admonition-title">Warning</p>
 <p>Due to the topic of bias and fairness, some users may be offended by the content contained herein, including prompts and output generated from use of the prompts.</p>
 </div>
-<section id="counterfactual-assessment-metrics">
-<h2>Counterfactual Assessment Metrics<a class="headerlink" href="#counterfactual-assessment-metrics" title="Link to this heading">#</a></h2>
 <section id="content">
-<h3>Content<a class="headerlink" href="#content" title="Link to this heading">#</a></h3>
+<h2>Content<a class="headerlink" href="#content" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><a class="reference internal" href="toxicity_metrics_demo.html#intro"><span class="std std-ref">Introduction</span></a></p></li>
 <li><p><a class="reference internal" href="stereotype_metrics_demo.html#gen-demo-dataset"><span class="std std-ref">Generate Demo Dataset</span></a></p></li>
@@ -459,10 +457,8 @@ to download the full example code.</p>
 <span class="n">DEPLOYMENT_NAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;DEPLOYMENT_NAME&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-</section>
 <section id="introduction">
-<span id="intro"></span><h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<span id="intro"></span><h3>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h3>
 <p>In many contexts, it is undesirable for a large language model (LLM) to generate substantially different output as a result of different protected attribute words contained in the input prompts, all else equal. This concept is known as (lack of) counterfactual fairness. LangFair offers the following counterfactual fairness metrics from the LLM fairness literature:</p>
 <ul class="simple">
 <li><p>Strict Counterfactual Sentiment Parity <a class="reference external" href="https://arxiv.org/pdf/1911.03064">Huang et al., 2020</a></p></li>
@@ -474,7 +470,7 @@ to download the full example code.</p>
 <p>For more details on the definitions of these metrics, refer to the Metric Definitions in this notebook or LangFair’s <a class="reference external" href="https://arxiv.org/pdf/2407.10853">technical playbook</a></p>
 </section>
 <section id="generate-demo-dataset">
-<span id="gen-demo-dataset"></span><h2>2. Generate Demo Dataset<a class="headerlink" href="#generate-demo-dataset" title="Link to this heading">#</a></h2>
+<span id="gen-demo-dataset"></span><h3>2. Generate Demo Dataset<a class="headerlink" href="#generate-demo-dataset" title="Link to this heading">#</a></h3>
 <p>Load input prompts with <cite>‘race</cite>’ as sensitive attribute.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># THIS IS AN EXAMPLE SET OF PROMPTS. USER TO REPLACE WITH THEIR OWN PROMPTS</span>
 <span class="n">resource_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">repo_path</span><span class="p">,</span> <span class="s2">&quot;data/RealToxicityPrompts.jsonl&quot;</span><span class="p">)</span>
@@ -491,7 +487,7 @@ to download the full example code.</p>
 </div>
 </section>
 <section id="counterfactual-dataset-generator">
-<h2>Counterfactual Dataset Generator<a class="headerlink" href="#counterfactual-dataset-generator" title="Link to this heading">#</a></h2>
+<h3>Counterfactual Dataset Generator<a class="headerlink" href="#counterfactual-dataset-generator" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">CounterfactualGenerator()</span></code> - Class for generating data for counterfactual discrimination assessment (class)</p>
 <p><strong>Class Attributes:</strong></p>
 <ul class="simple">
@@ -661,7 +657,7 @@ to download the full example code.</p>
 </div>
 </section>
 <section id="assessment">
-<span id="id5"></span><h2>3. Assessment<a class="headerlink" href="#assessment" title="Link to this heading">#</a></h2>
+<span id="id5"></span><h3>3. Assessment<a class="headerlink" href="#assessment" title="Link to this heading">#</a></h3>
 <p>This section shows two ways to evaluate countefactual metrics on a given dataset.</p>
 <ol class="arabic simple">
 <li><p>Lazy Implementation: Evalaute few or all available metrics on available dataset. This approach is useful for quick or first dry-run.</p></li>
@@ -894,11 +890,8 @@ Note: <cite>matplotlib</cite> installation is necessary to recreate the plot.</p
 </div>
 </section>
 <section id="metric-definitions">
-<span id="metric-defns"></span><h2>4. Metric Definitions<a class="headerlink" href="#metric-definitions" title="Link to this heading">#</a></h2>
+<span id="metric-defns"></span><h3>4. Metric Definitions<a class="headerlink" href="#metric-definitions" title="Link to this heading">#</a></h3>
 <p>Below are details of the LLM bias / fairness evaluation metrics calculated by the <cite>CounterfactualMetrics</cite> class. Metrics are defined in the context of a sample of <span class="math notranslate nohighlight">\(N\)</span> LLM outputs, denoted <span class="math notranslate nohighlight">\(\hat{Y}_1,...,\hat{Y}_N\)</span>. <strong>Below, a  ❗ is used to indicate the metrics we deem to be of particular importance.</strong></p>
-</section>
-<section id="counterfactual-fairness-metrics">
-<h2>Counterfactual Fairness Metrics<a class="headerlink" href="#counterfactual-fairness-metrics" title="Link to this heading">#</a></h2>
 <p>Given two protected attribute groups <span class="math notranslate nohighlight">\(G', G''\)</span>, a counterfactual input pair is defined as a pair of prompts, <span class="math notranslate nohighlight">\(X_i', X_i''\)</span> that are identical in every way except the former mentions protected attribute group <span class="math notranslate nohighlight">\(G'\)</span> and the latter mentions <span class="math notranslate nohighlight">\(G''\)</span>. Counterfactual metrics are evaluated on a sample of counterfactual response pairs <span class="math notranslate nohighlight">\((\hat{Y}_1', \hat{Y}_1''),...,(\hat{Y}_N', \hat{Y}_N'')\)</span> generated by an LLM from a sample of counterfactual input pairs <span class="math notranslate nohighlight">\((X_1',X_1''),...,(X_N',X_N'')\)</span>.</p>
 <p><em>Counterfactual Similarity Metrics</em></p>
 <p>Counterfactual similarity metrics assess similarity of counterfactually generated outputs. For the below three metrics, <strong>values closer to 1 indicate greater fairness.</strong></p>
@@ -938,6 +931,7 @@ Counterfactual Sentiment Bias (CSB)  ❗</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
 </section>
 </section>
 
@@ -988,16 +982,14 @@ Counterfactual Sentiment Bias (CSB)  ❗</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counterfactual-assessment-metrics">Counterfactual Assessment Metrics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#content">Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content">Content</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-demo-dataset">2. Generate Demo Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#counterfactual-dataset-generator">Counterfactual Dataset Generator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment">3. Assessment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-definitions">4. Metric Definitions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-demo-dataset">2. Generate Demo Dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counterfactual-dataset-generator">Counterfactual Dataset Generator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment">3. Assessment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-definitions">4. Metric Definitions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counterfactual-fairness-metrics">Counterfactual Fairness Metrics</a></li>
 </ul>
   </nav></div>
 

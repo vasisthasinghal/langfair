@@ -24,13 +24,10 @@
 Counterfactual Metrics
 ===============================================================
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-33
+.. GENERATED FROM PYTHON SOURCE LINES 11-30
 
 .. warning ::
   Due to the topic of bias and fairness, some users may be offended by the content contained herein, including prompts and output generated from use of the prompts.
-
-Counterfactual Assessment Metrics
----------------------------------
 
 Content
 *******
@@ -49,7 +46,7 @@ Content
 
 Import necessary libraries for the notebook.
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-67
+.. GENERATED FROM PYTHON SOURCE LINES 30-64
 
 .. code-block:: Python
 
@@ -88,7 +85,7 @@ Import necessary libraries for the notebook.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 68-86
+.. GENERATED FROM PYTHON SOURCE LINES 65-83
 
 .. _intro:
 1. Introduction
@@ -109,7 +106,7 @@ For more details on the definitions of these metrics, refer to the Metric Defini
 
 Load input prompts with `'race`' as sensitive attribute.
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-99
+.. GENERATED FROM PYTHON SOURCE LINES 83-96
 
 .. code-block:: Python
 
@@ -127,7 +124,7 @@ Load input prompts with `'race`' as sensitive attribute.
     prompts = [prompts[i] for i in range(len(prompts)) if not challenging[i]][15000:30000]
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 100-162
+.. GENERATED FROM PYTHON SOURCE LINES 97-159
 
 Counterfactual Dataset Generator
 --------------------------------
@@ -192,7 +189,7 @@ Below we use LangFair's ``CounterfactualGenerator`` class to check for fairness 
 
 **Important note: We provide three examples of LangChain LLMs below, but these can be replaced with a LangChain LLM of your choice.**
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-170
+.. GENERATED FROM PYTHON SOURCE LINES 159-167
 
 .. code-block:: Python
 
@@ -205,11 +202,11 @@ Below we use LangFair's ``CounterfactualGenerator`` class to check for fairness 
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 171-172
+.. GENERATED FROM PYTHON SOURCE LINES 168-169
 
 **Example 1: Gemini Pro with VertexAI**
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-183
+.. GENERATED FROM PYTHON SOURCE LINES 169-180
 
 .. code-block:: Python
 
@@ -225,11 +222,11 @@ Below we use LangFair's ``CounterfactualGenerator`` class to check for fairness 
     # suppressed_exceptions = (IndexError, ) # suppresses error when gemini refuses to answer
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 184-185
+.. GENERATED FROM PYTHON SOURCE LINES 181-182
 
 **Example 2: Mistral AI**
 
-.. GENERATED FROM PYTHON SOURCE LINES 185-200
+.. GENERATED FROM PYTHON SOURCE LINES 182-197
 
 .. code-block:: Python
 
@@ -249,11 +246,11 @@ Below we use LangFair's ``CounterfactualGenerator`` class to check for fairness 
     # suppressed_exceptions = None
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 201-202
+.. GENERATED FROM PYTHON SOURCE LINES 198-199
 
 **Example 3: OpenAI on Azure**
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-226
+.. GENERATED FROM PYTHON SOURCE LINES 199-223
 
 .. code-block:: Python
 
@@ -282,11 +279,11 @@ Below we use LangFair's ``CounterfactualGenerator`` class to check for fairness 
     )  # this suppresses content filtering errors
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 227-228
+.. GENERATED FROM PYTHON SOURCE LINES 224-225
 
 Instantiate ``CounterfactualGenerator`` class
 
-.. GENERATED FROM PYTHON SOURCE LINES 228-235
+.. GENERATED FROM PYTHON SOURCE LINES 225-232
 
 .. code-block:: Python
 
@@ -298,13 +295,13 @@ Instantiate ``CounterfactualGenerator`` class
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 236-239
+.. GENERATED FROM PYTHON SOURCE LINES 233-236
 
 For illustration, this notebook assesses with 'race' as the protected attribute, but metrics can be evaluated for 'gender' or other custom protected attributes in the same way. First, the above mentioned `parse_texts` method is used to identify the input prompts that contain protected attribute words.
 
 Note: We recommend using atleast 1000 prompts that contain protected attribute words for better estimates. Otherwise, increase `count` attribute of `CounterfactualGenerator` class generate more responses.
 
-.. GENERATED FROM PYTHON SOURCE LINES 239-252
+.. GENERATED FROM PYTHON SOURCE LINES 236-249
 
 .. code-block:: Python
 
@@ -322,11 +319,11 @@ Note: We recommend using atleast 1000 prompts that contain protected attribute w
     race_prompts.tail(5)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 253-254
+.. GENERATED FROM PYTHON SOURCE LINES 250-251
 
 Generate the model response on the input prompts using ``generate_responses`` method.
 
-.. GENERATED FROM PYTHON SOURCE LINES 254-272
+.. GENERATED FROM PYTHON SOURCE LINES 251-269
 
 .. code-block:: Python
 
@@ -349,7 +346,7 @@ Generate the model response on the input prompts using ``generate_responses`` me
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 273-302
+.. GENERATED FROM PYTHON SOURCE LINES 270-299
 
 .. _assessment:
 3. Assessment
@@ -381,7 +378,7 @@ This section shows two ways to evaluate countefactual metrics on a given dataset
       Returns:
       - A dictionary containing all Counterfactual metric values (**dict**).
 
-.. GENERATED FROM PYTHON SOURCE LINES 302-320
+.. GENERATED FROM PYTHON SOURCE LINES 299-317
 
 .. code-block:: Python
 
@@ -404,12 +401,12 @@ This section shows two ways to evaluate countefactual metrics on a given dataset
         count += 1
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 321-323
+.. GENERATED FROM PYTHON SOURCE LINES 318-320
 
 Next, we create a scatter plot to compare the metrics for different race combinations.
 Note: `matplotlib` installation is necessary to recreate the plot.
 
-.. GENERATED FROM PYTHON SOURCE LINES 323-351
+.. GENERATED FROM PYTHON SOURCE LINES 320-348
 
 .. code-block:: Python
 
@@ -442,7 +439,7 @@ Note: `matplotlib` installation is necessary to recreate the plot.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 352-378
+.. GENERATED FROM PYTHON SOURCE LINES 349-375
 
 .. _separate:
 3.2 Separate Implementation
@@ -471,7 +468,7 @@ Note: `matplotlib` installation is necessary to recreate the plot.
     Returns:
     - Counterfactual Sentiment Bias score (**float**)
 
-.. GENERATED FROM PYTHON SOURCE LINES 378-391
+.. GENERATED FROM PYTHON SOURCE LINES 375-388
 
 .. code-block:: Python
 
@@ -489,7 +486,7 @@ Note: `matplotlib` installation is necessary to recreate the plot.
         )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 392-412
+.. GENERATED FROM PYTHON SOURCE LINES 389-409
 
 3.2.2 Cosine Similarity
 
@@ -512,7 +509,7 @@ Note: `matplotlib` installation is necessary to recreate the plot.
     Returns:
     - Cosine distance score(s) (**float or list of floats**)
 
-.. GENERATED FROM PYTHON SOURCE LINES 412-421
+.. GENERATED FROM PYTHON SOURCE LINES 409-418
 
 .. code-block:: Python
 
@@ -526,7 +523,7 @@ Note: `matplotlib` installation is necessary to recreate the plot.
         print(f"{group1}-{group2} Counterfactual Cosine Similarity: ", similarity_values)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 422-441
+.. GENERATED FROM PYTHON SOURCE LINES 419-438
 
 3.2.3 RougeL Similarity
 
@@ -548,7 +545,7 @@ Note: `matplotlib` installation is necessary to recreate the plot.
     Returns:
     - ROUGE-L or ROUGE-L sums score(s) (**float or list of floats**)
 
-.. GENERATED FROM PYTHON SOURCE LINES 441-457
+.. GENERATED FROM PYTHON SOURCE LINES 438-454
 
 .. code-block:: Python
 
@@ -569,7 +566,7 @@ Note: `matplotlib` installation is necessary to recreate the plot.
         print(f"{group1}-{group2} Counterfactual RougeL Similarity: ", similarity_values)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 458-475
+.. GENERATED FROM PYTHON SOURCE LINES 455-472
 
 3.2.4 BLEU Similarity
 
@@ -589,7 +586,7 @@ Note: `matplotlib` installation is necessary to recreate the plot.
     Returns:
     - BLEU score(s) (**float or list of floats**)
 
-.. GENERATED FROM PYTHON SOURCE LINES 475-492
+.. GENERATED FROM PYTHON SOURCE LINES 472-489
 
 .. code-block:: Python
 
@@ -611,16 +608,13 @@ Note: `matplotlib` installation is necessary to recreate the plot.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 493-546
+.. GENERATED FROM PYTHON SOURCE LINES 490-540
 
 .. _metric-defns:
 4. Metric Definitions
 ---------------------
 
 Below are details of the LLM bias / fairness evaluation metrics calculated by the `CounterfactualMetrics` class. Metrics are defined in the context of a sample of :math:`N` LLM outputs, denoted :math:`\hat{Y}_1,...,\hat{Y}_N`. **Below, a  ❗ is used to indicate the metrics we deem to be of particular importance.**
-
-Counterfactual Fairness Metrics
--------------------------------
 
 Given two protected attribute groups :math:`G', G''`, a counterfactual input pair is defined as a pair of prompts, :math:`X_i', X_i''` that are identical in every way except the former mentions protected attribute group :math:`G'` and the latter mentions :math:`G''`. Counterfactual metrics are evaluated on a sample of counterfactual response pairs :math:`(\hat{Y}_1', \hat{Y}_1''),...,(\hat{Y}_N', \hat{Y}_N'')` generated by an LLM from a sample of counterfactual input pairs :math:`(X_1',X_1''),...,(X_N',X_N'')`.
 

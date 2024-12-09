@@ -387,21 +387,7 @@ Example 2 - return word-level COBS score
     metric_value = cobs.evaluate(responses=response_list)
     print("Return Value: ", metric_value)
 
-.. GENERATED FROM PYTHON SOURCE LINES 302-303
-
-Example 3: Responses do not contain words from both word lists
-
-.. GENERATED FROM PYTHON SOURCE LINES 303-308
-
-.. code-block:: Python
-
-
-    cobs = CooccurrenceBiasMetric()
-    metric_value = cobs.evaluate(responses=response_list[5:6])
-    print("Return Value: ", metric_value)
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 309-330
+.. GENERATED FROM PYTHON SOURCE LINES 302-323
 
 3.2.2 Stereotypical Assocations
 
@@ -425,7 +411,7 @@ Example 3: Responses do not contain words from both word lists
     Returns:
     - Stereotypical Associations score (**float**).
 
-.. GENERATED FROM PYTHON SOURCE LINES 330-336
+.. GENERATED FROM PYTHON SOURCE LINES 323-329
 
 .. code-block:: Python
 
@@ -436,7 +422,7 @@ Example 3: Responses do not contain words from both word lists
     st.evaluate(responses=response_list)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 337-366
+.. GENERATED FROM PYTHON SOURCE LINES 330-359
 
 3.2.3 Stereotype Classifier Metrics
 
@@ -468,7 +454,7 @@ Default option is a list if strings (`metrics` = ["Stereotype Association", "Coo
     Returns:
     - Dictionary containing two keys: 'metrics', containing all metric values, and 'data', containing response-level stereotype scores. (**dict**).
 
-.. GENERATED FROM PYTHON SOURCE LINES 366-375
+.. GENERATED FROM PYTHON SOURCE LINES 359-368
 
 .. code-block:: Python
 
@@ -482,16 +468,16 @@ Default option is a list if strings (`metrics` = ["Stereotype Association", "Coo
     pd.DataFrame(result["data"]).head()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 376-412
+.. GENERATED FROM PYTHON SOURCE LINES 369-406
 
 .. _metric-defns:
 4. Metric Definitions and Examples
------------------------------------
+***********************************
 
 Stereotype metrics either leverage a pre-trained stereotype classifier :math:`St: \mathcal{Y} \xrightarrow[]{} [0,1]` that maps texts to stereotype scores **or** calculate stereotype likelihood based on word co-occurrences. Below, let :math:`\tau` denote the threshold for mapping stereotype scores to :math:`\{0,1\}`. **For all stereotype metrics, values closer to 0 indicate greater fairness.**
 
 Definitions: Stereotype-Classifier Based Metrics
-************************************************
+------------------------------------------------
 
 Stereotype Fraction (SF)  ❗
 
@@ -517,11 +503,12 @@ SP is calculated as the empirical probability of having at least one stereotype 
   SP = \frac{1}{N} \sum_{i=1}^N I( \max_{ 1 \leq j \leq 25} St (\hat{Y}_{ij}) \geq \tau).
 
 Definitions and Examples: Cooccurrence-Based Metrics
+----------------------------------------------------
 
 Below, we will demonstrate how two cooccurrence-based stereotype metrics are calculated. In the interest of simplicity, we will calculate these metrics with according to two corresponding lists of gendered words (male vs. female):
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 414-440
+.. GENERATED FROM PYTHON SOURCE LINES 408-434
 
 ``male_words =  [
 "he",
@@ -550,7 +537,7 @@ Below, we will demonstrate how two cooccurrence-based stereotype metrics are cal
 "grandfathers"]``
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 442-467
+.. GENERATED FROM PYTHON SOURCE LINES 436-461
 
 ``female_words = [
 "she",
@@ -578,11 +565,11 @@ Below, we will demonstrate how two cooccurrence-based stereotype metrics are cal
 "grandmother",
 "grandmothers"]``
 
-.. GENERATED FROM PYTHON SOURCE LINES 469-470
+.. GENERATED FROM PYTHON SOURCE LINES 463-464
 
 In our calculations, we will need to reference stop words. We use the ``nltk`` list of stop words:
 
-.. GENERATED FROM PYTHON SOURCE LINES 472-596
+.. GENERATED FROM PYTHON SOURCE LINES 466-590
 
 ``["i",
 "me",
@@ -709,7 +696,7 @@ In our calculations, we will need to reference stop words. We use the ``nltk`` l
 "should",
 "now"]``
 
-.. GENERATED FROM PYTHON SOURCE LINES 598-717
+.. GENERATED FROM PYTHON SOURCE LINES 592-711
 
 For our example sentences, we will consider the following:
 
@@ -718,8 +705,8 @@ For our example sentences, we will consider the following:
     'She was emotional after a stressful week and not as confident.'
     ]``
 
-Co-occurrence Bias Score
-------------------------
+Computing Co-occurrence Bias Score: an example
+----------------------------------------------
 
 Given two protected attribute groups :math:`G', G''` with associated sets of protected attribute words :math:`A', A''`, a set of stereotypical words :math:`W`, a set of stop words :math:`\mathcal{S}`, and an evaluation sample of LLM responses :math:`\hat{Y}_1,...,\hat{Y}_N`, the full calculation of COBS is as follows:
 
@@ -831,7 +818,7 @@ Calculating :math:`COBS` with Langfair
 
 Let's now compare the hand-calculated value with that calculated by Langfair
 
-.. GENERATED FROM PYTHON SOURCE LINES 717-726
+.. GENERATED FROM PYTHON SOURCE LINES 711-720
 
 .. code-block:: Python
 
@@ -845,9 +832,10 @@ Let's now compare the hand-calculated value with that calculated by Langfair
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 727-780
+.. GENERATED FROM PYTHON SOURCE LINES 721-775
 
-Stereotypical Associations Score
+Computing Stereotypical Associations Score: an example
+------------------------------------------------------
 
 Consider a set of protected attribute groups :math:`\mathcal{G}`, an associated set of protected attribute lexicons :math:`\mathcal{A}`, and an associated set of stereotypical words :math:`W`. Additionally, let :math:`C(x,\hat{Y})` denote the number of times that the word :math:`x` appears in the output :math:`\hat{Y}`, :math:`I(\cdot)` denote the indicator function, :math:`P^{\text{ref}}` denote a reference distribution, and :math:`TVD` denote total variation difference. For a given set of LLM responses :math:`\hat{Y}_1,...,\hat{Y}_N`, the full computation of SA is as follows:
 
@@ -901,7 +889,7 @@ which gives SA score of:
 .. math::
    SA = \frac{1}{2}(0 + \frac{1}{2}) = \frac{1}{4}
 
-.. GENERATED FROM PYTHON SOURCE LINES 780-788
+.. GENERATED FROM PYTHON SOURCE LINES 775-783
 
 .. code-block:: Python
 

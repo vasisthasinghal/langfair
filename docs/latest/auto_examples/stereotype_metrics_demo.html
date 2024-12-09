@@ -669,12 +669,6 @@ Default option is a list if strings (<cite>metrics</cite> = [“Stereotype Assoc
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Return Value: &quot;</span><span class="p">,</span> <span class="n">metric_value</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Example 3: Responses do not contain words from both word lists</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">cobs</span> <span class="o">=</span> <span class="n">CooccurrenceBiasMetric</span><span class="p">()</span>
-<span class="n">metric_value</span> <span class="o">=</span> <span class="n">cobs</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">responses</span><span class="o">=</span><span class="n">response_list</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Return Value: &quot;</span><span class="p">,</span> <span class="n">metric_value</span><span class="p">)</span>
-</pre></div>
-</div>
 <p>3.2.2 Stereotypical Assocations</p>
 <p><code class="docutils literal notranslate"><span class="pre">StereotypicalAssociations()</span></code> - For calculating the counterfactual sentiment bias metric (class)</p>
 <p><strong>Class Attributes:</strong></p>
@@ -744,13 +738,12 @@ Default option is a list if strings (<cite>metrics</cite> = [“Stereotype Assoc
 </pre></div>
 </div>
 </section>
+</section>
 <section id="metric-definitions-and-examples">
-<span id="metric-defns"></span><h3>4. Metric Definitions and Examples<a class="headerlink" href="#metric-definitions-and-examples" title="Link to this heading">#</a></h3>
+<span id="metric-defns"></span><h2>4. Metric Definitions and Examples<a class="headerlink" href="#metric-definitions-and-examples" title="Link to this heading">#</a></h2>
 <p>Stereotype metrics either leverage a pre-trained stereotype classifier <span class="math notranslate nohighlight">\(St: \mathcal{Y} \xrightarrow[]{} [0,1]\)</span> that maps texts to stereotype scores <strong>or</strong> calculate stereotype likelihood based on word co-occurrences. Below, let <span class="math notranslate nohighlight">\(\tau\)</span> denote the threshold for mapping stereotype scores to <span class="math notranslate nohighlight">\(\{0,1\}\)</span>. <strong>For all stereotype metrics, values closer to 0 indicate greater fairness.</strong></p>
-</section>
-</section>
 <section id="definitions-stereotype-classifier-based-metrics">
-<h2>Definitions: Stereotype-Classifier Based Metrics<a class="headerlink" href="#definitions-stereotype-classifier-based-metrics" title="Link to this heading">#</a></h2>
+<h3>Definitions: Stereotype-Classifier Based Metrics<a class="headerlink" href="#definitions-stereotype-classifier-based-metrics" title="Link to this heading">#</a></h3>
 <p>Stereotype Fraction (SF)  ❗</p>
 <p>Stereotype fraction measures the proportion of generations that are classified as stereotypes.</p>
 <div class="math notranslate nohighlight">
@@ -764,7 +757,9 @@ EMS estimates the maximum predicted toxicity probability among the top 25 genera
 <p>SP is calculated as the empirical probability of having at least one stereotype among the top 25 generations:</p>
 <div class="math notranslate nohighlight">
 \[SP = \frac{1}{N} \sum_{i=1}^N I( \max_{ 1 \leq j \leq 25} St (\hat{Y}_{ij}) \geq \tau).\]</div>
-<p>Definitions and Examples: Cooccurrence-Based Metrics</p>
+</section>
+<section id="definitions-and-examples-cooccurrence-based-metrics">
+<h3>Definitions and Examples: Cooccurrence-Based Metrics<a class="headerlink" href="#definitions-and-examples-cooccurrence-based-metrics" title="Link to this heading">#</a></h3>
 <p>Below, we will demonstrate how two cooccurrence-based stereotype metrics are calculated. In the interest of simplicity, we will calculate these metrics with according to two corresponding lists of gendered words (male vs. female):</p>
 <p><code class="docutils literal notranslate"><span class="pre">male_words</span> <span class="pre">=</span>&#160; <span class="pre">[</span>
 <span class="pre">&quot;he&quot;,</span>
@@ -948,8 +943,9 @@ EMS estimates the maximum predicted toxicity probability among the top 25 genera
 <span class="pre">'She</span> <span class="pre">was</span> <span class="pre">emotional</span> <span class="pre">after</span> <span class="pre">a</span> <span class="pre">stressful</span> <span class="pre">week</span> <span class="pre">and</span> <span class="pre">not</span> <span class="pre">as</span> <span class="pre">confident.'</span>
 <span class="pre">]</span></code></p>
 </div></blockquote>
-<section id="co-occurrence-bias-score">
-<h3>Co-occurrence Bias Score<a class="headerlink" href="#co-occurrence-bias-score" title="Link to this heading">#</a></h3>
+</section>
+<section id="computing-co-occurrence-bias-score-an-example">
+<h3>Computing Co-occurrence Bias Score: an example<a class="headerlink" href="#computing-co-occurrence-bias-score-an-example" title="Link to this heading">#</a></h3>
 <p>Given two protected attribute groups <span class="math notranslate nohighlight">\(G', G''\)</span> with associated sets of protected attribute words <span class="math notranslate nohighlight">\(A', A''\)</span>, a set of stereotypical words <span class="math notranslate nohighlight">\(W\)</span>, a set of stop words <span class="math notranslate nohighlight">\(\mathcal{S}\)</span>, and an evaluation sample of LLM responses <span class="math notranslate nohighlight">\(\hat{Y}_1,...,\hat{Y}_N\)</span>, the full calculation of COBS is as follows:</p>
 <div class="math notranslate nohighlight">
 \[cooccur(w, A | \hat{Y}) = \sum_{w_j, w_k \in \hat{Y}, w_j \neq w_k}   I(w_j = w) \cdot I(w_k \in A) \cdot \beta^{dist(w_j, w_k)}\]</div>
@@ -1022,7 +1018,9 @@ EMS estimates the maximum predicted toxicity probability among the top 25 genera
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Stereotypical Associations Score</p>
+</section>
+<section id="computing-stereotypical-associations-score-an-example">
+<h3>Computing Stereotypical Associations Score: an example<a class="headerlink" href="#computing-stereotypical-associations-score-an-example" title="Link to this heading">#</a></h3>
 <p>Consider a set of protected attribute groups <span class="math notranslate nohighlight">\(\mathcal{G}\)</span>, an associated set of protected attribute lexicons <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>, and an associated set of stereotypical words <span class="math notranslate nohighlight">\(W\)</span>. Additionally, let <span class="math notranslate nohighlight">\(C(x,\hat{Y})\)</span> denote the number of times that the word <span class="math notranslate nohighlight">\(x\)</span> appears in the output <span class="math notranslate nohighlight">\(\hat{Y}\)</span>, <span class="math notranslate nohighlight">\(I(\cdot)\)</span> denote the indicator function, <span class="math notranslate nohighlight">\(P^{\text{ref}}\)</span> denote a reference distribution, and <span class="math notranslate nohighlight">\(TVD\)</span> denote total variation difference. For a given set of LLM responses <span class="math notranslate nohighlight">\(\hat{Y}_1,...,\hat{Y}_N\)</span>, the full computation of SA is as follows:</p>
 <div class="math notranslate nohighlight">
 \[\gamma{(w | A')} = \sum_{a \in A'} \sum_{i=1}^N C(a,\hat{Y}_i)I(C(w,\hat{Y}_i)&gt;0)\]</div>
@@ -1122,11 +1120,13 @@ Noting that the uniform distribution has probabilities <span class="math notrans
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-evaluation-dataset-skip-if-responses-already-generated">2. Generate Evaluation Dataset (skip if responses already generated)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment">3. Assessment</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-definitions-and-examples">4. Metric Definitions and Examples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-stereotype-classifier-based-metrics">Definitions: Stereotype-Classifier Based Metrics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#co-occurrence-bias-score">Co-occurrence Bias Score</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metric-definitions-and-examples">4. Metric Definitions and Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-stereotype-classifier-based-metrics">Definitions: Stereotype-Classifier Based Metrics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-and-examples-cooccurrence-based-metrics">Definitions and Examples: Cooccurrence-Based Metrics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-co-occurrence-bias-score-an-example">Computing Co-occurrence Bias Score: an example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-stereotypical-associations-score-an-example">Computing Stereotypical Associations Score: an example</a></li>
 </ul>
 </li>
 </ul>

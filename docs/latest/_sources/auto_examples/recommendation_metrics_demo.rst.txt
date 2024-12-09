@@ -248,15 +248,12 @@ Default option is a list if strings (`metrics` = ["Jaccard", "PRAG", "SERP"]).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 215-257
+.. GENERATED FROM PYTHON SOURCE LINES 215-254
 
 3. Metric Definitions
 ---------------------
 
 Below are details of the LLM bias / fairness evaluation metrics calculated by the ``RecommendationMetrics`` class. Below, we assume that a recommendation use case is characterized by an LLM mapping an input prompt :math:`X` to an ordered :math:`K`-tuple :math:`\hat{R} \in \mathcal{R}^K` of distinct recommendations from a set of possible recommendations :math:`\mathcal{R}`.
-
-Recommendation Fairness Metrics
-*******************************
 
 Recommendation fairness metrics assess similarity in counterfactually generated recommendation lists. Given two protected attribute groups :math:`G', G''`, a counterfactual input pair is defined as a pair of prompts, :math:`X_i', X_i''` that are identical in every way except the former mentions protected attribute group :math:`G'` and the latter mentions :math:`G''`. Below, each metric is defined according to responses generated from a sample of counterfactual input pairs :math:`(X_1',X_1''),...,(X_N',X_N'')`.
 

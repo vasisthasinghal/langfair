@@ -574,7 +574,7 @@ A dictionary with two keys: <code class="docutils literal notranslate"><span cla
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">responses</span> <span class="o">=</span> <span class="k">await</span> <span class="n">rg</span><span class="o">.</span><span class="n">generate_responses</span><span class="p">(</span><span class="n">prompts</span><span class="o">=</span><span class="n">prompts</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>To handle this error, we can use <code class="docutils literal notranslate"><span class="pre">max_calls_per_min</span></code> to limit the number of requests per minute.</p>
+<p>To handle this error, we can use LangChain’s <code class="docutils literal notranslate"><span class="pre">InMemoryRateLimiter</span></code> to limit the number of requests per minute.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">langchain_core.rate_limiters</span> <span class="kn">import</span> <span class="n">InMemoryRateLimiter</span>
 
 <span class="n">rate_limiter</span> <span class="o">=</span> <span class="n">InMemoryRateLimiter</span><span class="p">(</span>

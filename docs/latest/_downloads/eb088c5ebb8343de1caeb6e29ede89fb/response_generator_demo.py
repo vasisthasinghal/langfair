@@ -187,7 +187,7 @@ print(f"Time elapsed for synchronous generation: {stop - start}")
 responses = await rg.generate_responses(prompts=prompts)
 
 # %%
-# To handle this error, we can use ``max_calls_per_min`` to limit the number of requests per minute.
+# To handle this error, we can use LangChain's ``InMemoryRateLimiter`` to limit the number of requests per minute.
 
 from langchain_core.rate_limiters import InMemoryRateLimiter
 
